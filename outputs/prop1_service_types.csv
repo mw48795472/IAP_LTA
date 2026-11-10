@@ -1,0 +1,23 @@
+﻿firm,service,sector,pre_type,post_type,payment_changed,android_price_old_krw,android_price_new_krw,price_product,android_price_change_date,price_change_pct,breakeven_fee_pct,web_price_kept,verification,source_url_1
+콘텐츠웨이브,웨이브,영상,앱 내 자체결제,인앱결제 수용·가격 인상,True,7900.00,9000.00,베이직 월 이용권(안드로이드 인앱),2022-04-01,13.92,12.22,Y,fetched,https://nocutnews.co.kr/news/5729252
+CJ ENM(티빙),티빙,영상,앱 내 자체결제,인앱결제 수용·가격 인상,True,7900.00,9000.00,베이직 월 이용권(안드로이드 인앱),2022-03-31,13.92,12.22,Y,fetched,https://www.ddaily.co.kr/page/view/2022053117191404680
+왓챠,왓챠,영상,구글 인앱결제,인앱결제 수용·가격 변화 미확인,False,,,,,,,,fetched,https://www.mt.co.kr/tech/2022/03/24/2022032407012668765
+KT(시즌),시즌(seezn),영상,앱 내 자체결제,인앱결제 수용·가격 인상,True,5500.00,6300.00,플레인 월 이용권(안드로이드 인앱),2022-05-02,14.55,12.70,,fetched,https://biz.newdaily.co.kr/site/data/html/2022/04/25/2022042500246.html
+카카오엔터테인먼트(멜론),멜론,음원,앱 내 자체결제,인앱결제 수용·가격 인상,True,7900.00,8700.00,스트리밍클럽 월 정기결제(안드로이드 인앱),2022-06-29,10.13,9.20,Y,fetched,https://www.fnnews.com/news/202206071442033304
+KT(지니뮤직),지니뮤직,음원,앱 내 자체결제,인앱결제 수용·가격 변화 미확인,True,,,,,,,,fetched,https://www.dailian.co.kr/news/view/1122474/
+드림어스컴퍼니(플로),FLO,음원,앱 내 자체결제,제3자 결제 도입,True,7900.00,9000.00,무제한 듣기 월(제3자결제가→구글 인앱가),2022-03,13.92,12.22,,fetched,https://www.ddaily.co.kr/page/view/2022053117191404680
+NHN벅스,벅스,음원,앱 내 자체결제,,True,,,,,,,,fetched,https://www.dailian.co.kr/news/view/1122474/
+네이버(바이브),VIBE,음원,앱 내 자체결제,인앱결제 수용·가격 변화 미확인,True,,,무제한 듣기 이용권(구글플레이),2022-05,,,Y,fetched,https://news.mtn.co.kr/news-detail/2022051916585114601
+네이버웹툰,네이버웹툰(쿠키),웹툰·웹소설,앱 내 자체결제,인앱결제 수용·가격 인상,True,100.00,120.00,쿠키 1개(안드로이드 인앱),2022-05-30,20.00,16.67,Y,fetched,https://www.ddaily.co.kr/page/view/2022053117191404680
+네이버,네이버 시리즈(쿠키),웹툰·웹소설,앱 내 자체결제,인앱결제 수용·가격 인상,True,100.00,120.00,쿠키 1개(안드로이드 인앱),2022-05-30,20.00,16.67,,fetched,https://www.webtoonguide.com/ko/board/news04_generalnews/16953
+카카오엔터테인먼트,카카오페이지·카카오웹툰(캐시),웹툰·웹소설,앱 내 자체결제,인앱결제 수용·가격 인상,True,1000.00,1200.00,1000캐시(안드로이드 인앱),2022-06-01,20.00,16.67,Y,fetched,https://zdnet.co.kr/view/?no=20220523181929
+리디,리디(캐시),웹툰·웹소설,앱 내 자체결제,인앱결제 수용·가격 인상,True,1000.00,1200.00,1000캐시(안드로이드 인앱·1.2배 환율),2022-05-30,20.00,16.67,Y,fetched,https://www.ddaily.co.kr/page/view/2022053117191404680
+카카오,카카오톡 이모티콘 플러스,메신저·기타,앱 내 자체결제,인앱결제 수용·가격 인상,True,4900.00,5700.00,월 구독(안드로이드 구글플레이 인앱),2022-05,16.33,14.04,Y,fetched,https://www.dailian.co.kr/news/view/1122068/
+카카오,카카오톡 톡서랍 플러스,메신저·기타,앱 내 자체결제,인앱결제 수용·가격 변화 미확인,True,,2200.00,100GB 월(구글플레이 인앱),,,,Y,fetched,https://v.daum.net/v/pdYlprhLvZ
+구글(유튜브),유튜브 프리미엄,영상,구글 인앱결제,인앱결제 수용·가격 인상,False,10450.00,14900.00,개인 월 구독(한국),2023-12-08,42.58,29.87,,fetched,https://mobile.newsis.com/view/NISX20231216_0002560654
+넷플릭스,넷플릭스,영상,앱 내 결제 없음(웹 전용),앱 내 결제 제거(웹 전용),False,,,,,,,,fetched,https://www.mt.co.kr/tech/2022/03/24/2022032407012668765
+스포티파이,스포티파이,음원,,,True,,,개인 월 10900원(VAT 별도·2021-02 한국 출시가),,,,,snippet,https://www.khan.co.kr/article/202102081903001
+엔씨소프트,퍼플(리니지M·리니지2M·아이온2 PC 결제),게임,구글 인앱결제,인앱결제 유지·자체 채널 병행,True,,,,,,,,fetched,https://byline.network/2026/03/9-409/
+넷마블,자체 PC·웹 결제(주요 신작),게임,구글 인앱결제,인앱결제 유지·자체 채널 병행,True,,,,,,,,fetched,https://byline.network/2025/05/8-341/
+넥슨,마비노기 모바일 자체 PC 결제,게임,구글 인앱결제,인앱결제 유지·자체 채널 병행,True,,,,,,,,fetched,https://byline.network/2026/03/9-409/
+스마일게이트,이클립스 PC 결제,게임,,인앱결제 유지·자체 채널 병행,True,,,,,,,,fetched,https://www.sisajournal-e.com/news/articleView.html?idxno=424646

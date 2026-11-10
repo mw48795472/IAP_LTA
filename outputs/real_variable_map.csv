@@ -1,0 +1,20 @@
+﻿name,raw_code,description,raw_variable
+paid_app,c06006,"유료 애플리케이션 구입 경험(1 있다, 2 없다). 스마트 기기 이용자만 응답",p{yy}c06006
+inapp_item,c06007,유/무료 애플리케이션 내 아이템 및 확장기능 구입 경험,p{yy}c06007
+app_spend,c06010,애플리케이션 관련 1년 총 지출(천원),p{yy}c06010
+ott_use,d26001,OTT 서비스 이용 여부,p{yy}d26001
+ott_tvod,d26052,OTT 건당 결제형 이용(2021년부터),p{yy}d26052
+ott_svod,d26053,OTT 월정액제 가입형 이용(2021년부터),p{yy}d26053
+tvod_spend,d26055,건당 결제형 월평균 지출(천원),p{yy}d26055
+svod_spend,d26057,월정액제 가입형 월평균 지출(천원),p{yy}d26057
+use_edu,c05049,온라인 교육 동영상 이용,p{yy}c05049
+use_webtoon,c05050,온라인 뉴스/잡지/E-book(웹툰·웹소설 포함) 이용,p{yy}c05050
+use_music,c05051,온라인 음악 이용,p{yy}c05051
+use_game,c05052,온라인 게임 이용,p{yy}c05052
+webtoon_spend,c05001,뉴스/잡지/E-book 월평균 지출(천원),p{yy}c05001
+music_spend,c05007,음악 월평균 지출(천원),p{yy}c05007
+game_spend,c05009,게임 월평균 지출(천원),p{yy}c05009
+phone_maker,a03028,"첫째 스마트폰 제조사(1 삼성, 2 LG, 3 애플, 그 밖은 기타)",p{yy}a03028
+gender,gender,"성별(1 남, 2 여)",p{yy}gender
+age_group,age,연령대(1 10대 미만 ~ 8 70세 이상),p{yy}age
+age,age1,만 나이,p{yy}age1

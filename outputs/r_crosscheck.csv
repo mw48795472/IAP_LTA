@@ -1,0 +1,13 @@
+"quantity","source","value"
+"loglik_het","R_EM",-70404.0482306
+"npar_het","R_EM",38
+"bic_het","R_EM",141159.220007745
+"loglik_hom","R_EM",-70417.5548435769
+"loglik_regime","R_EM",-70412.0149410361
+"loglik_free_theta","R_EM",-70384.8126174369
+"K","R_EM",3
+"loglik_het","LMest",-70404.0479583221
+"npar_het","LMest",38
+"bic_het","LMest",141159.219463189
+"max_abs_diff_theta_vs_R","LMest",7.65173852301793e-05
+"max_abs_diff_A_vs_R","LMest",0.000315266359547373
