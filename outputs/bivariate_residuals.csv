@@ -1,0 +1,7 @@
+pair,2020,2021,2022,2023,2024,최대
+inapp_item × paid_music,0.07,0.57,3.87,1.78,6.75,6.75
+inapp_item × paid_video,0.21,1.96,0.24,4.19,6.38,6.38
+paid_app × inapp_item,0.74,4.73,0.96,3.04,6.1,6.1
+paid_app × paid_music,0.76,3.2,3.1,1.83,1.77,3.2
+paid_app × paid_video,1.59,2.62,2.6,4.48,1.75,4.48
+paid_video × paid_music,0.04,0.56,2.75,2.16,1.99,2.75

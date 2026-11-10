@@ -1,0 +1,9 @@
+# KISDI 개인 원자료와 그 파생 패널은 올리지 않는다
+data/private/
+
+__pycache__/
+.ipynb_checkpoints/
+node_modules/
+*.zip
+Rplots.pdf
+~$*

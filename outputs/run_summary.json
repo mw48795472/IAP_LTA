@@ -1,0 +1,31 @@
+{
+ "data_mode": "synthetic",
+ "n_persons": 10302,
+ "n_waves": 5,
+ "n_items": 4,
+ "person_waves": 46643,
+ "n_complete": 7381,
+ "n_patterns": 5161,
+ "K_selected": 3,
+ "n_starts": 10,
+ "n_boot": 500,
+ "n_boot_valid": 500,
+ "coverage": {
+  "theta": [
+   12,
+   12
+  ],
+  "A": [
+   34,
+   36
+  ],
+  "occ": [
+   14,
+   15
+  ]
+ },
+ "max_abs_err": {
+  "theta": 0.00591071961226719,
+  "A": 0.04328211001008497
+ }
+}

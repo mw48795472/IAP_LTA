@@ -1,0 +1,2257 @@
+{
+ "flow": [
+  {
+   "wave": 2020,
+   "응답자 수": 10302,
+   "응답률(%)": 100.0,
+   "직전 시점 응답자 중 유지(%)": null
+  },
+  {
+   "wave": 2021,
+   "응답자 수": 9740,
+   "응답률(%)": 94.54,
+   "직전 시점 응답자 중 유지(%)": 94.54
+  },
+  {
+   "wave": 2022,
+   "응답자 수": 9368,
+   "응답률(%)": 90.93,
+   "직전 시점 응답자 중 유지(%)": 94.52
+  },
+  {
+   "wave": 2023,
+   "응답자 수": 9156,
+   "응답률(%)": 88.88,
+   "직전 시점 응답자 중 유지(%)": 94.95
+  },
+  {
+   "wave": 2024,
+   "응답자 수": 8077,
+   "응답률(%)": 78.4,
+   "직전 시점 응답자 중 유지(%)": 84.39
+  }
+ ],
+ "prev": [
+  {
+   "Unnamed: 0": 2020,
+   "paid_app": 4.79,
+   "inapp_item": 11.92,
+   "paid_video": 43.68,
+   "paid_music": 22.02
+  },
+  {
+   "Unnamed: 0": 2021,
+   "paid_app": 4.9,
+   "inapp_item": 13.12,
+   "paid_video": 48.03,
+   "paid_music": 24.66
+  },
+  {
+   "Unnamed: 0": 2022,
+   "paid_app": 5.61,
+   "inapp_item": 14.41,
+   "paid_video": 49.91,
+   "paid_music": 25.55
+  },
+  {
+   "Unnamed: 0": 2023,
+   "paid_app": 5.84,
+   "inapp_item": 14.75,
+   "paid_video": 51.88,
+   "paid_music": 27.21
+  },
+  {
+   "Unnamed: 0": 2024,
+   "paid_app": 6.59,
+   "inapp_item": 15.0,
+   "paid_video": 54.21,
+   "paid_music": 28.31
+  }
+ ],
+ "calib": [
+  {
+   "Unnamed: 0": "paid_app",
+   "모의패널 2024년 관측 경험률(%)": 6.59,
+   "2025년 공표 수치(%)": 5.4,
+   "공표 수치의 기준": "스마트 기기 이용자 중 구입 경험률"
+  },
+  {
+   "Unnamed: 0": "inapp_item",
+   "모의패널 2024년 관측 경험률(%)": 15.0,
+   "2025년 공표 수치(%)": 15.4,
+   "공표 수치의 기준": "스마트 기기 이용자 중 구입 경험률"
+  },
+  {
+   "Unnamed: 0": "paid_video",
+   "모의패널 2024년 관측 경험률(%)": 54.21,
+   "2025년 공표 수치(%)": 54.3,
+   "공표 수치의 기준": "OTT 이용자 중 월정액 이용 59.7% × 전체 OTT 이용률 90.9%"
+  },
+  {
+   "Unnamed: 0": "paid_music",
+   "모의패널 2024년 관측 경험률(%)": 28.31,
+   "2025년 공표 수치(%)": 28.0,
+   "공표 수치의 기준": "전체 응답자 중 온라인 음악 이용률(무료 이용 포함, 상한)"
+  }
+ ],
+ "sel": [
+  {
+   "K": 1,
+   "loglik": -86460.4918631372,
+   "npar": 4,
+   "AIC": 172928.9837262744,
+   "BIC": 172957.9440995949,
+   "converged_starts": 1,
+   "n_starts": 1,
+   "best_replicated": 1,
+   "smallest_state_share": 1.0,
+   "mean_max_posterior": 1.0,
+   "entropy": 1.0,
+   "dBIC": 31798.7241510455
+  },
+  {
+   "K": 2,
+   "loglik": -72184.4792454745,
+   "npar": 17,
+   "AIC": 144402.9584909489,
+   "BIC": 144526.0400775611,
+   "converged_starts": 10,
+   "n_starts": 10,
+   "best_replicated": 10,
+   "smallest_state_share": 0.4015503798,
+   "mean_max_posterior": 0.9430137818,
+   "entropy": 0.7913443138,
+   "dBIC": 3366.8201290117
+  },
+  {
+   "K": 3,
+   "loglik": -70404.0482010023,
+   "npar": 38,
+   "AIC": 140884.0964020046,
+   "BIC": 141159.2199485493,
+   "converged_starts": 10,
+   "n_starts": 10,
+   "best_replicated": 10,
+   "smallest_state_share": 0.113917805,
+   "mean_max_posterior": 0.8902524969,
+   "entropy": 0.744846235,
+   "dBIC": 0.0
+  },
+  {
+   "K": 4,
+   "loglik": -70380.6164107943,
+   "npar": 67,
+   "AIC": 140895.2328215887,
+   "BIC": 141380.3190747071,
+   "converged_starts": 3,
+   "n_starts": 10,
+   "best_replicated": 1,
+   "smallest_state_share": 0.0520847191,
+   "mean_max_posterior": 0.8603538827,
+   "entropy": 0.7433199017,
+   "dBIC": 221.0991261578
+  },
+  {
+   "K": 5,
+   "loglik": -70370.9588165546,
+   "npar": 104,
+   "AIC": 140949.9176331092,
+   "BIC": 141702.8873394423,
+   "converged_starts": 1,
+   "n_starts": 10,
+   "best_replicated": 1,
+   "smallest_state_share": 0.0188175892,
+   "mean_max_posterior": 0.7931581331,
+   "entropy": 0.6521106768,
+   "dBIC": 543.6673908929
+  }
+ ],
+ "inv": [
+  {
+   "model": "응답확률 시점 간 동일(불변)",
+   "loglik": -70404.0482010023,
+   "npar": 38,
+   "BIC": 141159.2199485493,
+   "AIC": 140884.0964020046,
+   "dBIC_vs_invariant": 0.0
+  },
+  {
+   "model": "응답확률 시점별 자유",
+   "loglik": -70384.812541534,
+   "npar": 86,
+   "BIC": 141564.2731094587,
+   "AIC": 140941.6250830679,
+   "dBIC_vs_invariant": 405.0531609094
+  }
+ ],
+ "tests": [
+  {
+   "test": "동질 vs 구간별 자유(총괄)",
+   "LR": 27.0132853947,
+   "df": 18,
+   "p": 0.0787466436,
+   "BIC_restricted": 141019.9115540017,
+   "BIC_full": 141159.2199485493
+  },
+  {
+   "test": "동질 vs 두 국면(초점)",
+   "LR": 11.0798061453,
+   "df": 6,
+   "p": 0.0859410217,
+   "BIC_restricted": 141019.9115540017,
+   "BIC_full": 141064.2723078372
+  },
+  {
+   "test": "두 국면 vs 구간별 자유",
+   "LR": 15.9334792494,
+   "df": 12,
+   "p": 0.1943018697,
+   "BIC_restricted": 141064.2723078372,
+   "BIC_full": 141159.2199485493
+  }
+ ],
+ "prof": [
+  {
+   "item": "paid_app",
+   "state": "S1 저소비",
+   "estimate": 0.0052109431,
+   "ci_low": 0.0041256872,
+   "ci_high": 0.0064365994,
+   "true": 0.005,
+   "covered": true
+  },
+  {
+   "item": "paid_app",
+   "state": "S2 구독 중심",
+   "estimate": 0.0292901646,
+   "ci_low": 0.0253679946,
+   "ci_high": 0.033225111,
+   "true": 0.03,
+   "covered": true
+  },
+  {
+   "item": "paid_app",
+   "state": "S3 복합 구매",
+   "estimate": 0.3006589361,
+   "ci_low": 0.2857892748,
+   "ci_high": 0.3149579206,
+   "true": 0.3,
+   "covered": true
+  },
+  {
+   "item": "inapp_item",
+   "state": "S1 저소비",
+   "estimate": 0.0196985984,
+   "ci_low": 0.0175570099,
+   "ci_high": 0.0219436275,
+   "true": 0.02,
+   "covered": true
+  },
+  {
+   "item": "inapp_item",
+   "state": "S2 구독 중심",
+   "estimate": 0.1016194279,
+   "ci_low": 0.0939307896,
+   "ci_high": 0.1093487356,
+   "true": 0.1,
+   "covered": true
+  },
+  {
+   "item": "inapp_item",
+   "state": "S3 복합 구매",
+   "estimate": 0.6524289294,
+   "ci_low": 0.6312502577,
+   "ci_high": 0.6726738139,
+   "true": 0.65,
+   "covered": true
+  },
+  {
+   "item": "paid_video",
+   "state": "S1 저소비",
+   "estimate": 0.1042970942,
+   "ci_low": 0.0980644622,
+   "ci_high": 0.1097555794,
+   "true": 0.1,
+   "covered": true
+  },
+  {
+   "item": "paid_video",
+   "state": "S2 구독 중심",
+   "estimate": 0.8440892804,
+   "ci_low": 0.8347071212,
+   "ci_high": 0.8525760726,
+   "true": 0.85,
+   "covered": true
+  },
+  {
+   "item": "paid_video",
+   "state": "S3 복합 구매",
+   "estimate": 0.904736284,
+   "ci_low": 0.8956081645,
+   "ci_high": 0.9130593928,
+   "true": 0.9,
+   "covered": true
+  },
+  {
+   "item": "paid_music",
+   "state": "S1 저소비",
+   "estimate": 0.0300698137,
+   "ci_low": 0.0269164135,
+   "ci_high": 0.0327267817,
+   "true": 0.03,
+   "covered": true
+  },
+  {
+   "item": "paid_music",
+   "state": "S2 구독 중심",
+   "estimate": 0.3783987777,
+   "ci_low": 0.3676410825,
+   "ci_high": 0.3884020182,
+   "true": 0.38,
+   "covered": true
+  },
+  {
+   "item": "paid_music",
+   "state": "S3 복합 구매",
+   "estimate": 0.7036661062,
+   "ci_low": 0.6882485354,
+   "ci_high": 0.7203069067,
+   "true": 0.7,
+   "covered": true
+  }
+ ],
+ "trans": [
+  {
+   "interval": "2020→2021",
+   "from_state": "S1 저소비",
+   "to_state": "S1 저소비",
+   "estimate": 0.8665333475,
+   "ci_low": 0.8530586941,
+   "ci_high": 0.8802073529,
+   "true": 0.88,
+   "covered": true
+  },
+  {
+   "interval": "2020→2021",
+   "from_state": "S1 저소비",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.1069054323,
+   "ci_low": 0.0920123762,
+   "ci_high": 0.1212734355,
+   "true": 0.1,
+   "covered": true
+  },
+  {
+   "interval": "2020→2021",
+   "from_state": "S1 저소비",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.0265612202,
+   "ci_low": 0.0194009606,
+   "ci_high": 0.0337904041,
+   "true": 0.02,
+   "covered": true
+  },
+  {
+   "interval": "2020→2021",
+   "from_state": "S2 구독 중심",
+   "to_state": "S1 저소비",
+   "estimate": 0.0348300485,
+   "ci_low": 0.0172065754,
+   "ci_high": 0.0541501987,
+   "true": 0.06,
+   "covered": false
+  },
+  {
+   "interval": "2020→2021",
+   "from_state": "S2 구독 중심",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.90328211,
+   "ci_low": 0.8719360833,
+   "ci_high": 0.9323292887,
+   "true": 0.86,
+   "covered": false
+  },
+  {
+   "interval": "2020→2021",
+   "from_state": "S2 구독 중심",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.0618878415,
+   "ci_low": 0.0380976956,
+   "ci_high": 0.0852098799,
+   "true": 0.08,
+   "covered": true
+  },
+  {
+   "interval": "2020→2021",
+   "from_state": "S3 복합 구매",
+   "to_state": "S1 저소비",
+   "estimate": 0.0473429162,
+   "ci_low": 0.0251404507,
+   "ci_high": 0.0699713828,
+   "true": 0.03,
+   "covered": true
+  },
+  {
+   "interval": "2020→2021",
+   "from_state": "S3 복합 구매",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.1074126752,
+   "ci_low": 0.0492459903,
+   "ci_high": 0.1602532782,
+   "true": 0.12,
+   "covered": true
+  },
+  {
+   "interval": "2020→2021",
+   "from_state": "S3 복합 구매",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.8452444086,
+   "ci_low": 0.7958653888,
+   "ci_high": 0.8987540982,
+   "true": 0.85,
+   "covered": true
+  },
+  {
+   "interval": "2021→2022",
+   "from_state": "S1 저소비",
+   "to_state": "S1 저소비",
+   "estimate": 0.8905925532,
+   "ci_low": 0.8779349387,
+   "ci_high": 0.9033932038,
+   "true": 0.88,
+   "covered": true
+  },
+  {
+   "interval": "2021→2022",
+   "from_state": "S1 저소비",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.0877093866,
+   "ci_low": 0.0751076775,
+   "ci_high": 0.1006918109,
+   "true": 0.1,
+   "covered": true
+  },
+  {
+   "interval": "2021→2022",
+   "from_state": "S1 저소비",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.0216980602,
+   "ci_low": 0.014843739,
+   "ci_high": 0.0284242765,
+   "true": 0.02,
+   "covered": true
+  },
+  {
+   "interval": "2021→2022",
+   "from_state": "S2 구독 중심",
+   "to_state": "S1 저소비",
+   "estimate": 0.0726017985,
+   "ci_low": 0.0553103058,
+   "ci_high": 0.0868609837,
+   "true": 0.06,
+   "covered": true
+  },
+  {
+   "interval": "2021→2022",
+   "from_state": "S2 구독 중심",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.8571305366,
+   "ci_low": 0.8344021363,
+   "ci_high": 0.8823947115,
+   "true": 0.86,
+   "covered": true
+  },
+  {
+   "interval": "2021→2022",
+   "from_state": "S2 구독 중심",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.070267665,
+   "ci_low": 0.0488532728,
+   "ci_high": 0.0888721637,
+   "true": 0.08,
+   "covered": true
+  },
+  {
+   "interval": "2021→2022",
+   "from_state": "S3 복합 구매",
+   "to_state": "S1 저소비",
+   "estimate": 0.0312152718,
+   "ci_low": 0.0154280448,
+   "ci_high": 0.0479430634,
+   "true": 0.03,
+   "covered": true
+  },
+  {
+   "interval": "2021→2022",
+   "from_state": "S3 복합 구매",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.1173375638,
+   "ci_low": 0.0685573501,
+   "ci_high": 0.1610855958,
+   "true": 0.12,
+   "covered": true
+  },
+  {
+   "interval": "2021→2022",
+   "from_state": "S3 복합 구매",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.8514471644,
+   "ci_low": 0.8080386762,
+   "ci_high": 0.9009225858,
+   "true": 0.85,
+   "covered": true
+  },
+  {
+   "interval": "2022→2023",
+   "from_state": "S1 저소비",
+   "to_state": "S1 저소비",
+   "estimate": 0.8658256998,
+   "ci_low": 0.851390862,
+   "ci_high": 0.8816269592,
+   "true": 0.88,
+   "covered": true
+  },
+  {
+   "interval": "2022→2023",
+   "from_state": "S1 저소비",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.1090422341,
+   "ci_low": 0.0925720448,
+   "ci_high": 0.1254058288,
+   "true": 0.1,
+   "covered": true
+  },
+  {
+   "interval": "2022→2023",
+   "from_state": "S1 저소비",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.0251320661,
+   "ci_low": 0.018455805,
+   "ci_high": 0.0327349612,
+   "true": 0.02,
+   "covered": true
+  },
+  {
+   "interval": "2022→2023",
+   "from_state": "S2 구독 중심",
+   "to_state": "S1 저소비",
+   "estimate": 0.065961018,
+   "ci_low": 0.0499783997,
+   "ci_high": 0.0820758345,
+   "true": 0.06,
+   "covered": true
+  },
+  {
+   "interval": "2022→2023",
+   "from_state": "S2 구독 중심",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.8564427231,
+   "ci_low": 0.8327099148,
+   "ci_high": 0.8798625015,
+   "true": 0.86,
+   "covered": true
+  },
+  {
+   "interval": "2022→2023",
+   "from_state": "S2 구독 중심",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.077596259,
+   "ci_low": 0.0589276504,
+   "ci_high": 0.0972630016,
+   "true": 0.08,
+   "covered": true
+  },
+  {
+   "interval": "2022→2023",
+   "from_state": "S3 복합 구매",
+   "to_state": "S1 저소비",
+   "estimate": 0.0234594265,
+   "ci_low": 0.0074920222,
+   "ci_high": 0.0398044396,
+   "true": 0.03,
+   "covered": true
+  },
+  {
+   "interval": "2022→2023",
+   "from_state": "S3 복합 구매",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.187572012,
+   "ci_low": 0.1400070114,
+   "ci_high": 0.240387146,
+   "true": 0.18,
+   "covered": true
+  },
+  {
+   "interval": "2022→2023",
+   "from_state": "S3 복합 구매",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.7889685615,
+   "ci_low": 0.7401330458,
+   "ci_high": 0.8411080952,
+   "true": 0.79,
+   "covered": true
+  },
+  {
+   "interval": "2023→2024",
+   "from_state": "S1 저소비",
+   "to_state": "S1 저소비",
+   "estimate": 0.8805878537,
+   "ci_low": 0.8642981521,
+   "ci_high": 0.8995608334,
+   "true": 0.88,
+   "covered": true
+  },
+  {
+   "interval": "2023→2024",
+   "from_state": "S1 저소비",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.0958355952,
+   "ci_low": 0.0760338844,
+   "ci_high": 0.1150891335,
+   "true": 0.1,
+   "covered": true
+  },
+  {
+   "interval": "2023→2024",
+   "from_state": "S1 저소비",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.0235765511,
+   "ci_low": 0.014365989,
+   "ci_high": 0.0319300475,
+   "true": 0.02,
+   "covered": true
+  },
+  {
+   "interval": "2023→2024",
+   "from_state": "S2 구독 중심",
+   "to_state": "S1 저소비",
+   "estimate": 0.0503523963,
+   "ci_low": 0.0323648949,
+   "ci_high": 0.0676123178,
+   "true": 0.06,
+   "covered": true
+  },
+  {
+   "interval": "2023→2024",
+   "from_state": "S2 구독 중심",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.8696708321,
+   "ci_low": 0.8414246134,
+   "ci_high": 0.9010617136,
+   "true": 0.86,
+   "covered": true
+  },
+  {
+   "interval": "2023→2024",
+   "from_state": "S2 구독 중심",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.0799767717,
+   "ci_low": 0.0554651191,
+   "ci_high": 0.1007156511,
+   "true": 0.08,
+   "covered": true
+  },
+  {
+   "interval": "2023→2024",
+   "from_state": "S3 복합 구매",
+   "to_state": "S1 저소비",
+   "estimate": 0.0235417978,
+   "ci_low": 0.0027412337,
+   "ci_high": 0.0432895338,
+   "true": 0.03,
+   "covered": true
+  },
+  {
+   "interval": "2023→2024",
+   "from_state": "S3 복합 구매",
+   "to_state": "S2 구독 중심",
+   "estimate": 0.19829063,
+   "ci_low": 0.1460403666,
+   "ci_high": 0.2579401329,
+   "true": 0.18,
+   "covered": true
+  },
+  {
+   "interval": "2023→2024",
+   "from_state": "S3 복합 구매",
+   "to_state": "S3 복합 구매",
+   "estimate": 0.7781675722,
+   "ci_low": 0.7243857752,
+   "ci_high": 0.828771611,
+   "true": 0.79,
+   "covered": true
+  }
+ ],
+ "occ": [
+  {
+   "wave": 2020,
+   "state": "S1 저소비",
+   "estimate": 0.5587366226,
+   "ci_low": 0.5458542069,
+   "ci_high": 0.5707027874,
+   "true": 0.55,
+   "covered": true
+  },
+  {
+   "wave": 2020,
+   "state": "S2 구독 중심",
+   "estimate": 0.3273455724,
+   "ci_low": 0.3120950077,
+   "ci_high": 0.3428819775,
+   "true": 0.33,
+   "covered": true
+  },
+  {
+   "wave": 2020,
+   "state": "S3 복합 구매",
+   "estimate": 0.113917805,
+   "ci_low": 0.1041284597,
+   "ci_high": 0.1238870886,
+   "true": 0.12,
+   "covered": true
+  },
+  {
+   "wave": 2021,
+   "state": "S1 저소비",
+   "estimate": 0.5009585792,
+   "ci_low": 0.4901060579,
+   "ci_high": 0.5117366861,
+   "true": 0.5074,
+   "covered": true
+  },
+  {
+   "wave": 2021,
+   "state": "S2 구독 중심",
+   "estimate": 0.3676535957,
+   "ci_low": 0.3546119553,
+   "ci_high": 0.3830946481,
+   "true": 0.3532,
+   "covered": false
+  },
+  {
+   "wave": 2021,
+   "state": "S3 복합 구매",
+   "estimate": 0.1313878251,
+   "ci_low": 0.1204561087,
+   "ci_high": 0.1422898641,
+   "true": 0.1394,
+   "covered": true
+  },
+  {
+   "wave": 2022,
+   "state": "S1 저소비",
+   "estimate": 0.476943599,
+   "ci_low": 0.4657591663,
+   "ci_high": 0.4870512097,
+   "true": 0.471886,
+   "covered": true
+  },
+  {
+   "wave": 2022,
+   "state": "S2 구독 중심",
+   "estimate": 0.3744826208,
+   "ci_low": 0.3621301416,
+   "ci_high": 0.3882381916,
+   "true": 0.37122,
+   "covered": true
+  },
+  {
+   "wave": 2022,
+   "state": "S3 복합 구매",
+   "estimate": 0.1485737802,
+   "ci_low": 0.137868519,
+   "ci_high": 0.1603139487,
+   "true": 0.156894,
+   "covered": true
+  },
+  {
+   "wave": 2023,
+   "state": "S1 저소비",
+   "estimate": 0.441136736,
+   "ci_low": 0.4285156159,
+   "ci_high": 0.4528223741,
+   "true": 0.4422397,
+   "covered": true
+  },
+  {
+   "wave": 2023,
+   "state": "S2 구독 중심",
+   "estimate": 0.4005981939,
+   "ci_low": 0.3858911141,
+   "ci_high": 0.4164460407,
+   "true": 0.39467872,
+   "covered": true
+  },
+  {
+   "wave": 2023,
+   "state": "S3 복합 구매",
+   "estimate": 0.1582650701,
+   "ci_low": 0.1466479211,
+   "ci_high": 0.1706735017,
+   "true": 0.16308158,
+   "covered": true
+  },
+  {
+   "wave": 2024,
+   "state": "S1 저소비",
+   "estimate": 0.4123565748,
+   "ci_low": 0.3982931567,
+   "ci_high": 0.4248623066,
+   "true": 0.4177441066,
+   "covered": true
+  },
+  {
+   "wave": 2024,
+   "state": "S2 구독 중심",
+   "estimate": 0.4220476467,
+   "ci_low": 0.4046871585,
+   "ci_high": 0.4407134742,
+   "true": 0.4130023536,
+   "covered": true
+  },
+  {
+   "wave": 2024,
+   "state": "S3 복합 구매",
+   "estimate": 0.1655957785,
+   "ci_low": 0.1514361672,
+   "ci_high": 0.1793415062,
+   "true": 0.1692535398,
+   "covered": true
+  }
+ ],
+ "bvr": [
+  {
+   "pair": "inapp_item × paid_music",
+   "2020": 0.07,
+   "2021": 0.57,
+   "2022": 3.87,
+   "2023": 1.78,
+   "2024": 6.75,
+   "최대": 6.75
+  },
+  {
+   "pair": "inapp_item × paid_video",
+   "2020": 0.21,
+   "2021": 1.96,
+   "2022": 0.24,
+   "2023": 4.19,
+   "2024": 6.38,
+   "최대": 6.38
+  },
+  {
+   "pair": "paid_app × inapp_item",
+   "2020": 0.74,
+   "2021": 4.73,
+   "2022": 0.96,
+   "2023": 3.04,
+   "2024": 6.1,
+   "최대": 6.1
+  },
+  {
+   "pair": "paid_app × paid_music",
+   "2020": 0.76,
+   "2021": 3.2,
+   "2022": 3.1,
+   "2023": 1.83,
+   "2024": 1.77,
+   "최대": 3.2
+  },
+  {
+   "pair": "paid_app × paid_video",
+   "2020": 1.59,
+   "2021": 2.62,
+   "2022": 2.6,
+   "2023": 4.48,
+   "2024": 1.75,
+   "최대": 4.48
+  },
+  {
+   "pair": "paid_video × paid_music",
+   "2020": 0.04,
+   "2021": 0.56,
+   "2022": 2.75,
+   "2023": 2.16,
+   "2024": 1.99,
+   "최대": 2.75
+  }
+ ],
+ "sens": [
+  {
+   "spec": "주 분석(전체, 결측 주변화)",
+   "n_persons": 10302.0,
+   "loglik": -70404.0482010023,
+   "S1 저소비 첫 시점 비중": 0.5587366226,
+   "S1 저소비 마지막 시점 비중": 0.4123565748,
+   "S2 구독 중심 첫 시점 비중": 0.3273455724,
+   "S2 구독 중심 마지막 시점 비중": 0.4220476467,
+   "S3 복합 구매 첫 시점 비중": 0.113917805,
+   "S3 복합 구매 마지막 시점 비중": 0.1655957785,
+   "paid_app | S3 복합 구매": 0.3006589361,
+   "inapp_item | S3 복합 구매": 0.6524289294,
+   "paid_video | S3 복합 구매": 0.904736284,
+   "paid_music | S3 복합 구매": 0.7036661062,
+   "S3 복합 구매→S2 구독 중심 마지막 구간": 0.19829063
+  },
+  {
+   "spec": "완전응답자만",
+   "n_persons": 7381.0,
+   "loglik": -54611.2473994351,
+   "S1 저소비 첫 시점 비중": 0.5748673502,
+   "S1 저소비 마지막 시점 비중": 0.427194092,
+   "S2 구독 중심 첫 시점 비중": 0.3261190858,
+   "S2 구독 중심 마지막 시점 비중": 0.4176062454,
+   "S3 복합 구매 첫 시점 비중": 0.099013564,
+   "S3 복합 구매 마지막 시점 비중": 0.1551996625,
+   "paid_app | S3 복합 구매": 0.3014698288,
+   "inapp_item | S3 복합 구매": 0.6575889166,
+   "paid_video | S3 복합 구매": 0.9038882771,
+   "paid_music | S3 복합 구매": 0.7026770112,
+   "S3 복합 구매→S2 구독 중심 마지막 구간": 0.1959736084
+  },
+  {
+   "spec": "2021년 제외(4개 시점)",
+   "n_persons": 10302.0,
+   "loglik": -57273.8820766745,
+   "S1 저소비 첫 시점 비중": 0.5588271198,
+   "S1 저소비 마지막 시점 비중": 0.4119052675,
+   "S2 구독 중심 첫 시점 비중": 0.326687373,
+   "S2 구독 중심 마지막 시점 비중": 0.4237841209,
+   "S3 복합 구매 첫 시점 비중": 0.1144855072,
+   "S3 복합 구매 마지막 시점 비중": 0.1643106116,
+   "paid_app | S3 복합 구매": 0.3048626769,
+   "inapp_item | S3 복합 구매": 0.6548456638,
+   "paid_video | S3 복합 구매": 0.906648106,
+   "paid_music | S3 복합 구매": 0.7051454148,
+   "S3 복합 구매→S2 구독 중심 마지막 구간": 0.2108024777
+  },
+  {
+   "spec": "설계 참값",
+   "n_persons": null,
+   "loglik": null,
+   "S1 저소비 첫 시점 비중": 0.55,
+   "S1 저소비 마지막 시점 비중": 0.4177441066,
+   "S2 구독 중심 첫 시점 비중": 0.33,
+   "S2 구독 중심 마지막 시점 비중": 0.4130023536,
+   "S3 복합 구매 첫 시점 비중": 0.12,
+   "S3 복합 구매 마지막 시점 비중": 0.1692535398,
+   "paid_app | S3 복합 구매": 0.3,
+   "inapp_item | S3 복합 구매": 0.65,
+   "paid_video | S3 복합 구매": 0.9,
+   "paid_music | S3 복합 구매": 0.7,
+   "S3 복합 구매→S2 구독 중심 마지막 구간": 0.18
+  }
+ ],
+ "mc": [
+  {
+   "N": 500,
+   "delta": 0.0,
+   "reps": 200,
+   "reject_rate": 0.05,
+   "reject_mcse": 0.015411035,
+   "reject_rate_regime": 0.08,
+   "reject_mcse_regime": 0.0191833261,
+   "shift_regime_mean": 0.003683533,
+   "shift_regime_rmse": 0.1003269199,
+   "shift_mean": 0.00191024,
+   "shift_bias": 0.00191024,
+   "shift_sd": 0.0933925198,
+   "shift_rmse": 0.0931783288,
+   "mae_A": 0.0440867733,
+   "mae_theta": 0.0157549083,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 500,
+   "delta": 0.03,
+   "reps": 200,
+   "reject_rate": 0.035,
+   "reject_mcse": 0.0129951914,
+   "reject_rate_regime": 0.105,
+   "reject_mcse_regime": 0.0216766003,
+   "shift_regime_mean": 0.0228689108,
+   "shift_regime_rmse": 0.1130141502,
+   "shift_mean": 0.0195336612,
+   "shift_bias": -0.0104663388,
+   "shift_sd": 0.102066352,
+   "shift_rmse": 0.1023474316,
+   "mae_A": 0.0438972272,
+   "mae_theta": 0.0161034895,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 500,
+   "delta": 0.06,
+   "reps": 200,
+   "reject_rate": 0.055,
+   "reject_mcse": 0.0161206389,
+   "reject_rate_regime": 0.065,
+   "reject_mcse_regime": 0.0174320108,
+   "shift_regime_mean": 0.0378472925,
+   "shift_regime_rmse": 0.1196687568,
+   "shift_mean": 0.0348277971,
+   "shift_bias": -0.0251722029,
+   "shift_sd": 0.1108899086,
+   "shift_rmse": 0.1134404194,
+   "mae_A": 0.0450153953,
+   "mae_theta": 0.0158421971,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 500,
+   "delta": 0.1,
+   "reps": 200,
+   "reject_rate": 0.035,
+   "reject_mcse": 0.0129951914,
+   "reject_rate_regime": 0.06,
+   "reject_mcse_regime": 0.0167928556,
+   "shift_regime_mean": 0.1062370764,
+   "shift_regime_rmse": 0.1111331904,
+   "shift_mean": 0.0945958098,
+   "shift_bias": -0.0054041902,
+   "shift_sd": 0.1014245076,
+   "shift_rmse": 0.1013148625,
+   "mae_A": 0.0449171319,
+   "mae_theta": 0.0170716292,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 2000,
+   "delta": 0.0,
+   "reps": 200,
+   "reject_rate": 0.035,
+   "reject_mcse": 0.0129951914,
+   "reject_rate_regime": 0.06,
+   "reject_mcse_regime": 0.0167928556,
+   "shift_regime_mean": 0.0012703219,
+   "shift_regime_rmse": 0.057064237,
+   "shift_mean": 0.0017027891,
+   "shift_bias": 0.0017027891,
+   "shift_sd": 0.0566390731,
+   "shift_rmse": 0.0565229526,
+   "mae_A": 0.0228933215,
+   "mae_theta": 0.0076396325,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 2000,
+   "delta": 0.03,
+   "reps": 200,
+   "reject_rate": 0.07,
+   "reject_mcse": 0.0180416186,
+   "reject_rate_regime": 0.05,
+   "reject_mcse_regime": 0.015411035,
+   "shift_regime_mean": 0.0280314125,
+   "shift_regime_rmse": 0.0517072846,
+   "shift_mean": 0.0276482247,
+   "shift_bias": -0.0023517753,
+   "shift_sd": 0.0518969518,
+   "shift_rmse": 0.0518204399,
+   "mae_A": 0.0227286668,
+   "mae_theta": 0.0079204162,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 2000,
+   "delta": 0.06,
+   "reps": 200,
+   "reject_rate": 0.095,
+   "reject_mcse": 0.0207334271,
+   "reject_rate_regime": 0.115,
+   "reject_mcse_regime": 0.0225582579,
+   "shift_regime_mean": 0.0555964369,
+   "shift_regime_rmse": 0.0562200681,
+   "shift_mean": 0.0548488704,
+   "shift_bias": -0.0051511296,
+   "shift_sd": 0.0555048212,
+   "shift_rmse": 0.0556049942,
+   "mae_A": 0.0231721941,
+   "mae_theta": 0.0083132155,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 2000,
+   "delta": 0.1,
+   "reps": 200,
+   "reject_rate": 0.17,
+   "reject_mcse": 0.02656125,
+   "reject_rate_regime": 0.245,
+   "reject_mcse_regime": 0.0304117576,
+   "shift_regime_mean": 0.100257531,
+   "shift_regime_rmse": 0.0576005263,
+   "shift_mean": 0.0984436047,
+   "shift_bias": -0.0015563953,
+   "shift_sd": 0.0575652547,
+   "shift_rmse": 0.0574422503,
+   "mae_A": 0.0229817059,
+   "mae_theta": 0.0083910912,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 8000,
+   "delta": 0.0,
+   "reps": 200,
+   "reject_rate": 0.05,
+   "reject_mcse": 0.015411035,
+   "reject_rate_regime": 0.05,
+   "reject_mcse_regime": 0.015411035,
+   "shift_regime_mean": -9.52738e-05,
+   "shift_regime_rmse": 0.0266360682,
+   "shift_mean": -0.0002074955,
+   "shift_bias": -0.0002074955,
+   "shift_sd": 0.0269184112,
+   "shift_rmse": 0.0268518326,
+   "mae_A": 0.0113488937,
+   "mae_theta": 0.003778583,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 8000,
+   "delta": 0.03,
+   "reps": 200,
+   "reject_rate": 0.115,
+   "reject_mcse": 0.0225582579,
+   "reject_rate_regime": 0.13,
+   "reject_mcse_regime": 0.0237802439,
+   "shift_regime_mean": 0.0308391619,
+   "shift_regime_rmse": 0.0271682626,
+   "shift_mean": 0.0311565532,
+   "shift_bias": 0.0011565532,
+   "shift_sd": 0.027524905,
+   "shift_rmse": 0.027480355,
+   "mae_A": 0.0115140567,
+   "mae_theta": 0.0039116443,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 8000,
+   "delta": 0.06,
+   "reps": 200,
+   "reject_rate": 0.21,
+   "reject_mcse": 0.0288010416,
+   "reject_rate_regime": 0.33,
+   "reject_mcse_regime": 0.0332490601,
+   "shift_regime_mean": 0.0601002247,
+   "shift_regime_rmse": 0.0255109489,
+   "shift_mean": 0.0600735331,
+   "shift_bias": 7.35331e-05,
+   "shift_sd": 0.0255932771,
+   "shift_rmse": 0.0255293196,
+   "mae_A": 0.0112719723,
+   "mae_theta": 0.0039963,
+   "pct_converged": 100.0
+  },
+  {
+   "N": 8000,
+   "delta": 0.1,
+   "reps": 200,
+   "reject_rate": 0.575,
+   "reject_mcse": 0.0349553286,
+   "reject_rate_regime": 0.835,
+   "reject_mcse_regime": 0.0262464283,
+   "shift_regime_mean": 0.1003055098,
+   "shift_regime_rmse": 0.0285385441,
+   "shift_mean": 0.1000794105,
+   "shift_bias": 7.94105e-05,
+   "shift_sd": 0.0298204866,
+   "shift_rmse": 0.0297459479,
+   "mae_A": 0.0116039092,
+   "mae_theta": 0.0041071094,
+   "pct_converged": 100.0
+  }
+ ],
+ "mck": [
+  {
+   "N": 500,
+   "reps": 100,
+   "pct_bic_k2": 0.0,
+   "pct_bic_k3": 100.0,
+   "pct_bic_k4": 0.0,
+   "mean_dbic_3_vs_2": 67.7507598751,
+   "mean_dbic_3_vs_4": 146.428097076
+  },
+  {
+   "N": 2000,
+   "reps": 100,
+   "pct_bic_k2": 0.0,
+   "pct_bic_k3": 100.0,
+   "pct_bic_k4": 0.0,
+   "mean_dbic_3_vs_2": 561.6952535754,
+   "mean_dbic_3_vs_4": 187.0716864177
+  },
+  {
+   "N": 8000,
+   "reps": 100,
+   "pct_bic_k2": 0.0,
+   "pct_bic_k3": 100.0,
+   "pct_bic_k4": 0.0,
+   "mean_dbic_3_vs_2": 2628.8903688215,
+   "mean_dbic_3_vs_4": 238.5655640585
+  }
+ ],
+ "diag": {
+  "mean_max_posterior": 0.8902524969355332,
+  "normalized_entropy": 0.7448462349735044,
+  "max_bvr": 6.746026328879565,
+  "share_max_posterior_below_0_7": 0.12895825740196815
+ },
+ "run": {
+  "data_mode": "synthetic",
+  "n_persons": 10302,
+  "n_waves": 5,
+  "n_items": 4,
+  "person_waves": 46643,
+  "n_complete": 7381,
+  "n_patterns": 5161,
+  "K_selected": 3,
+  "n_starts": 10,
+  "n_boot": 500,
+  "n_boot_valid": 500,
+  "coverage": {
+   "theta": [
+    12,
+    12
+   ],
+   "A": [
+    34,
+    36
+   ],
+   "occ": [
+    14,
+    15
+   ]
+  },
+  "max_abs_err": {
+   "theta": 0.00591071961226719,
+   "A": 0.04328211001008497
+  }
+ },
+ "py": {
+  "loglik_het": -70404.04820100228,
+  "npar_het": 38,
+  "bic_het": 141159.21994854935,
+  "loglik_hom": -70417.55484369962,
+  "loglik_regime": -70412.01494062698,
+  "loglik_free_theta": -70384.81254153397,
+  "K": 3,
+  "pi": [
+   0.5587366225608175,
+   0.32734557240617734,
+   0.1139178050330052
+  ],
+  "A": [
+   [
+    [
+     0.8665333475409899,
+     0.10690543227355902,
+     0.026561220185451123
+    ],
+    [
+     0.034830048512323,
+     0.903282110010085,
+     0.061887841477592
+    ],
+    [
+     0.047342916223230815,
+     0.10741267519558294,
+     0.8452444085811862
+    ]
+   ],
+   [
+    [
+     0.8905925531830988,
+     0.08770938663595945,
+     0.02169806018094176
+    ],
+    [
+     0.07260179848149946,
+     0.8571305365627963,
+     0.07026766495570427
+    ],
+    [
+     0.031215271800467344,
+     0.11733756377094827,
+     0.8514471644285844
+    ]
+   ],
+   [
+    [
+     0.8658256998003159,
+     0.10904223407508601,
+     0.025132066124598135
+    ],
+    [
+     0.06596101798633511,
+     0.8564427230517496,
+     0.07759625896191526
+    ],
+    [
+     0.02345942647725305,
+     0.18757201199389922,
+     0.7889685615288478
+    ]
+   ],
+   [
+    [
+     0.8805878536656082,
+     0.0958355952124606,
+     0.023576551121931143
+    ],
+    [
+     0.05035239625801979,
+     0.8696708320556346,
+     0.07997677168634568
+    ],
+    [
+     0.023541797780053945,
+     0.19829062999694208,
+     0.778167572223004
+    ]
+   ]
+  ],
+  "theta": [
+   [
+    0.0052109431254567995,
+    0.02929016459310345,
+    0.30065893613741135
+   ],
+   [
+    0.019698598360352787,
+    0.10161942786442942,
+    0.6524289294009119
+   ],
+   [
+    0.1042970941514613,
+    0.8440892803877328,
+    0.9047362839830646
+   ],
+   [
+    0.03006981369839641,
+    0.37839877774091873,
+    0.7036661061854459
+   ]
+  ]
+ },
+ "cross": [
+  {
+   "quantity": "loglik_het",
+   "source": "R_EM",
+   "value": -70404.0482306
+  },
+  {
+   "quantity": "npar_het",
+   "source": "R_EM",
+   "value": 38.0
+  },
+  {
+   "quantity": "bic_het",
+   "source": "R_EM",
+   "value": 141159.220007745
+  },
+  {
+   "quantity": "loglik_hom",
+   "source": "R_EM",
+   "value": -70417.5548435769
+  },
+  {
+   "quantity": "loglik_regime",
+   "source": "R_EM",
+   "value": -70412.0149410361
+  },
+  {
+   "quantity": "loglik_free_theta",
+   "source": "R_EM",
+   "value": -70384.8126174369
+  },
+  {
+   "quantity": "K",
+   "source": "R_EM",
+   "value": 3.0
+  },
+  {
+   "quantity": "loglik_het",
+   "source": "LMest",
+   "value": -70404.0479583221
+  },
+  {
+   "quantity": "npar_het",
+   "source": "LMest",
+   "value": 38.0
+  },
+  {
+   "quantity": "bic_het",
+   "source": "LMest",
+   "value": 141159.219463189
+  },
+  {
+   "quantity": "max_abs_diff_theta_vs_R",
+   "source": "LMest",
+   "value": 7.65174e-05
+  },
+  {
+   "quantity": "max_abs_diff_A_vs_R",
+   "source": "LMest",
+   "value": 0.0003152664
+  }
+ ],
+ "agg": [
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2015,
+   "base": "전체 개인 응답자",
+   "n_weighted": 9873,
+   "value_pct": 77.6
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2016,
+   "base": "전체 개인 응답자",
+   "n_weighted": 9788,
+   "value_pct": 81.6
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2017,
+   "base": "전체 개인 응답자",
+   "n_weighted": 9425,
+   "value_pct": 84.8
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2018,
+   "base": "전체 개인 응답자",
+   "n_weighted": 9426,
+   "value_pct": 87.2
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2019,
+   "base": "전체 개인 응답자",
+   "n_weighted": 10864,
+   "value_pct": 88.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2020,
+   "base": "전체 개인 응답자",
+   "n_weighted": 10302,
+   "value_pct": 91.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2021,
+   "base": "전체 개인 응답자",
+   "n_weighted": 10154,
+   "value_pct": 92.8
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2022,
+   "base": "전체 개인 응답자",
+   "n_weighted": 9941,
+   "value_pct": 94.2
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2023,
+   "base": "전체 개인 응답자",
+   "n_weighted": 9757,
+   "value_pct": 94.8
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2024,
+   "base": "전체 개인 응답자",
+   "n_weighted": 8693,
+   "value_pct": 96.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: 휴대폰 보유율",
+   "page_pdf": 39,
+   "page_print": 11,
+   "indicator": "smartphone_ownership",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 8411,
+   "value_pct": 97.1
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: OTT 이용률",
+   "page_pdf": 41,
+   "page_print": 13,
+   "indicator": "ott_use",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2021,
+   "base": "전체 개인 응답자",
+   "n_weighted": 10154,
+   "value_pct": 81.7
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: OTT 이용률",
+   "page_pdf": 41,
+   "page_print": 13,
+   "indicator": "ott_use",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2022,
+   "base": "전체 개인 응답자",
+   "n_weighted": 9941,
+   "value_pct": 85.4
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: OTT 이용률",
+   "page_pdf": 41,
+   "page_print": 13,
+   "indicator": "ott_use",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2023,
+   "base": "전체 개인 응답자",
+   "n_weighted": 9757,
+   "value_pct": 88.1
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: OTT 이용률",
+   "page_pdf": 41,
+   "page_print": 13,
+   "indicator": "ott_use",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2024,
+   "base": "전체 개인 응답자",
+   "n_weighted": 8693,
+   "value_pct": 89.2
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "시계열 지표: OTT 이용률",
+   "page_pdf": 41,
+   "page_print": 13,
+   "indicator": "ott_use",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 8411,
+   "value_pct": 90.9
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "표 4-44",
+   "page_pdf": 127,
+   "page_print": 99,
+   "indicator": "paid_app",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 8178,
+   "value_pct": 5.4
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "표 4-44",
+   "page_pdf": 127,
+   "page_print": 99,
+   "indicator": "inapp_item",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 8178,
+   "value_pct": 15.4
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "표 4-43",
+   "page_pdf": 126,
+   "page_print": 98,
+   "indicator": "ott_svod",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 7648,
+   "value_pct": 59.7
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "표 4-43",
+   "page_pdf": 126,
+   "page_print": 98,
+   "indicator": "ott_tvod",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 7648,
+   "value_pct": 4.1
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "표 4-43",
+   "page_pdf": 126,
+   "page_print": 98,
+   "indicator": "ott_avod",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 7648,
+   "value_pct": 74.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "표 4-45",
+   "page_pdf": 127,
+   "page_print": 99,
+   "indicator": "music_use",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 8411,
+   "value_pct": 28.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "표 4-45",
+   "page_pdf": 127,
+   "page_print": 99,
+   "indicator": "game_use",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 8411,
+   "value_pct": 16.8
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "표 4-45",
+   "page_pdf": 127,
+   "page_print": 99,
+   "indicator": "news_ebook_webtoon_use",
+   "group_type": "전체",
+   "group": "전체",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 8411,
+   "value_pct": 23.6
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "연령",
+   "group": "만 10대 미만",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 77,
+   "value_pct": 0.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "연령",
+   "group": "만 10-19세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 751,
+   "value_pct": 6.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "연령",
+   "group": "만 20-29세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 981,
+   "value_pct": 17.8
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "연령",
+   "group": "만 30-39세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 1173,
+   "value_pct": 8.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "연령",
+   "group": "만 40-49세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 1350,
+   "value_pct": 5.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "연령",
+   "group": "만 50-59세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 1511,
+   "value_pct": 2.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "연령",
+   "group": "만 60-69세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 1344,
+   "value_pct": 1.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "연령",
+   "group": "만 70세 이상",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 991,
+   "value_pct": 0.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "연령",
+   "group": "만 10대 미만",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 77,
+   "value_pct": 20.3
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "연령",
+   "group": "만 10-19세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 751,
+   "value_pct": 16.9
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "연령",
+   "group": "만 20-29세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 981,
+   "value_pct": 30.2
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "연령",
+   "group": "만 30-39세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 1173,
+   "value_pct": 28.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "연령",
+   "group": "만 40-49세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 1350,
+   "value_pct": 14.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "연령",
+   "group": "만 50-59세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 1511,
+   "value_pct": 12.8
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "연령",
+   "group": "만 60-69세",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 1344,
+   "value_pct": 5.4
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "연령",
+   "group": "만 70세 이상",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 991,
+   "value_pct": 3.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문20",
+   "page_pdf": 513,
+   "page_print": 485,
+   "indicator": "ott_svod",
+   "group_type": "연령",
+   "group": "만 10대 미만",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 74,
+   "value_pct": 27.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문20",
+   "page_pdf": 513,
+   "page_print": 485,
+   "indicator": "ott_svod",
+   "group_type": "연령",
+   "group": "만 10-19세",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 754,
+   "value_pct": 57.6
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문20",
+   "page_pdf": 513,
+   "page_print": 485,
+   "indicator": "ott_svod",
+   "group_type": "연령",
+   "group": "만 20-29세",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 980,
+   "value_pct": 82.7
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문20",
+   "page_pdf": 513,
+   "page_print": 485,
+   "indicator": "ott_svod",
+   "group_type": "연령",
+   "group": "만 30-39세",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 1172,
+   "value_pct": 80.1
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문20",
+   "page_pdf": 513,
+   "page_print": 485,
+   "indicator": "ott_svod",
+   "group_type": "연령",
+   "group": "만 40-49세",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 1347,
+   "value_pct": 75.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문20",
+   "page_pdf": 513,
+   "page_print": 485,
+   "indicator": "ott_svod",
+   "group_type": "연령",
+   "group": "만 50-59세",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 1480,
+   "value_pct": 61.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문20",
+   "page_pdf": 513,
+   "page_print": 485,
+   "indicator": "ott_svod",
+   "group_type": "연령",
+   "group": "만 60-69세",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 1278,
+   "value_pct": 25.9
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문20",
+   "page_pdf": 513,
+   "page_print": 485,
+   "indicator": "ott_svod",
+   "group_type": "연령",
+   "group": "만 70세 이상",
+   "year": 2025,
+   "base": "OTT 서비스 이용자",
+   "n_weighted": 563,
+   "value_pct": 19.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문21",
+   "page_pdf": 516,
+   "page_print": 488,
+   "indicator": "music_use",
+   "group_type": "연령",
+   "group": "만 10대 미만",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 80,
+   "value_pct": 16.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문21",
+   "page_pdf": 516,
+   "page_print": 488,
+   "indicator": "music_use",
+   "group_type": "연령",
+   "group": "만 10-19세",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 762,
+   "value_pct": 37.6
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문21",
+   "page_pdf": 516,
+   "page_print": 488,
+   "indicator": "music_use",
+   "group_type": "연령",
+   "group": "만 20-29세",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 981,
+   "value_pct": 65.8
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문21",
+   "page_pdf": 516,
+   "page_print": 488,
+   "indicator": "music_use",
+   "group_type": "연령",
+   "group": "만 30-39세",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 1174,
+   "value_pct": 46.7
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문21",
+   "page_pdf": 516,
+   "page_print": 488,
+   "indicator": "music_use",
+   "group_type": "연령",
+   "group": "만 40-49세",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 1351,
+   "value_pct": 32.0
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문21",
+   "page_pdf": 516,
+   "page_print": 488,
+   "indicator": "music_use",
+   "group_type": "연령",
+   "group": "만 50-59세",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 1511,
+   "value_pct": 17.5
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문21",
+   "page_pdf": 516,
+   "page_print": 488,
+   "indicator": "music_use",
+   "group_type": "연령",
+   "group": "만 60-69세",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 1358,
+   "value_pct": 9.2
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문21",
+   "page_pdf": 516,
+   "page_print": 488,
+   "indicator": "music_use",
+   "group_type": "연령",
+   "group": "만 70세 이상",
+   "year": 2025,
+   "base": "전체 개인 응답자",
+   "n_weighted": 1195,
+   "value_pct": 3.4
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "성별",
+   "group": "남성",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 4085,
+   "value_pct": 6.1
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "성별",
+   "group": "남성",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 4085,
+   "value_pct": 16.7
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-1",
+   "page_pdf": 508,
+   "page_print": 480,
+   "indicator": "paid_app",
+   "group_type": "성별",
+   "group": "여성",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 4093,
+   "value_pct": 4.6
+  },
+  {
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02)",
+   "table": "통계표 문19-2",
+   "page_pdf": 510,
+   "page_print": 482,
+   "indicator": "inapp_item",
+   "group_type": "성별",
+   "group": "여성",
+   "year": 2025,
+   "base": "스마트 기기 이용자",
+   "n_weighted": 4093,
+   "value_pct": 14.2
+  }
+ ],
+ "ret": [
+  {
+   "panel": "통합패널",
+   "year": 2019,
+   "wave_no": 1,
+   "retained_from_prev": 10864,
+   "retention_pct": 100.0,
+   "dropped": null,
+   "reentered": null,
+   "respondents": 10864,
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02), <표 2-4>, PDF 69쪽(인쇄 41쪽)"
+  },
+  {
+   "panel": "통합패널",
+   "year": 2020,
+   "wave_no": 2,
+   "retained_from_prev": 10013,
+   "retention_pct": 92.2,
+   "dropped": 851.0,
+   "reentered": 289.0,
+   "respondents": 10302,
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02), <표 2-4>, PDF 69쪽(인쇄 41쪽)"
+  },
+  {
+   "panel": "통합패널",
+   "year": 2021,
+   "wave_no": 3,
+   "retained_from_prev": 9750,
+   "retention_pct": 94.6,
+   "dropped": 552.0,
+   "reentered": 404.0,
+   "respondents": 10154,
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02), <표 2-4>, PDF 69쪽(인쇄 41쪽)"
+  },
+  {
+   "panel": "통합패널",
+   "year": 2022,
+   "wave_no": 4,
+   "retained_from_prev": 9593,
+   "retention_pct": 94.5,
+   "dropped": 561.0,
+   "reentered": 348.0,
+   "respondents": 9941,
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02), <표 2-4>, PDF 69쪽(인쇄 41쪽)"
+  },
+  {
+   "panel": "통합패널",
+   "year": 2023,
+   "wave_no": 5,
+   "retained_from_prev": 9428,
+   "retention_pct": 94.8,
+   "dropped": 513.0,
+   "reentered": 329.0,
+   "respondents": 9757,
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02), <표 2-4>, PDF 69쪽(인쇄 41쪽)"
+  },
+  {
+   "panel": "통합패널",
+   "year": 2024,
+   "wave_no": 6,
+   "retained_from_prev": 8277,
+   "retention_pct": 84.8,
+   "dropped": 1480.0,
+   "reentered": 416.0,
+   "respondents": 8693,
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02), <표 2-4>, PDF 69쪽(인쇄 41쪽)"
+  },
+  {
+   "panel": "통합패널",
+   "year": 2025,
+   "wave_no": 7,
+   "retained_from_prev": 8002,
+   "retention_pct": 92.1,
+   "dropped": 691.0,
+   "reentered": 409.0,
+   "respondents": 8411,
+   "source": "정보통신정책연구원(2025). 2025 한국미디어패널조사(정책자료 25-11-02), <표 2-4>, PDF 69쪽(인쇄 41쪽)"
+  }
+ ]
+}

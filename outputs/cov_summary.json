@@ -1,0 +1,144 @@
+{
+  "data_mode": "synthetic",
+  "N": 10302,
+  "waves": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "policy_stage": {
+    "2020": 0,
+    "2021": 0,
+    "2022": 1,
+    "2023": 2,
+    "2024": 3
+  },
+  "coef_groups_main": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "coef_groups_sensitivity": [
+    0,
+    1,
+    1,
+    1
+  ],
+  "sector_price_increase_pct": {
+    "video": 13.92,
+    "music": 12.025,
+    "webtoon": 20.0,
+    "game": 0.0
+  },
+  "exposure_raw_mean": 15.189179770918267,
+  "exposure_raw_sd": 13.683306912172748,
+  "android_share": 0.7327703358571152,
+  "fit_seconds": 123.9,
+  "models": [
+    {
+      "model": "M0 공변량 없음(구간별 절편)",
+      "loglik": -69950.51606970199,
+      "npar": 38,
+      "bic": 140252.15568594876
+    },
+    {
+      "model": "M1 공변량, 계수 공통",
+      "loglik": -69144.10585745971,
+      "npar": 54,
+      "bic": 138787.1767547462
+    },
+    {
+      "model": "M2 공변량, 국면별 계수 [0,0,1,1]",
+      "loglik": -69131.81754970548,
+      "npar": 66,
+      "bic": 138873.48125919924
+    },
+    {
+      "model": "M2s 공변량, 국면별 계수 [0,1,1,1]",
+      "loglik": -69134.9286908816,
+      "npar": 66,
+      "bic": 138879.70354155148
+    }
+  ],
+  "lr_covariates": {
+    "stat": 1612.8204244845547,
+    "df": 16,
+    "p": 0.0
+  },
+  "lr_interaction": {
+    "stat": 24.57661550847115,
+    "df": 12,
+    "p": 0.01696161292904009
+  },
+  "lr_interaction_sensitivity": {
+    "stat": 18.35433315622504,
+    "df": 12,
+    "p": 0.10534766471461698
+  },
+  "focus_interaction": {
+    "origin": "S3 복합 구매",
+    "dest": "S2 구독 중심",
+    "covariate": "가격 인상 노출 지수(z)",
+    "estimate": 0.4450869027361907,
+    "se": 0.1996226777248836,
+    "z": 2.229640979716751,
+    "p": 0.025771287001980673,
+    "true": 0.5
+  },
+  "info_pd": true,
+  "iterations": 39,
+  "converged": true,
+  "max_abs_err_theta": 0.01425657381625689,
+  "trans_coef_coverage95": 0.9791666666666666,
+  "trans_coef_max_abs_z_err": 2.1827858260281054,
+  "monte_carlo": [
+    {
+      "N": 2000,
+      "alt": false,
+      "reps": 60.0,
+      "lr_reject": 0.08333333333333333,
+      "wald_reject": 0.08333333333333333,
+      "wald_mean": -0.2750023423756066,
+      "wald_sd": 0.868541479282242,
+      "wald_se_mean": 0.6880225492886738,
+      "pct_converged": 100.0
+    },
+    {
+      "N": 2000,
+      "alt": true,
+      "reps": 60.0,
+      "lr_reject": 0.18333333333333332,
+      "wald_reject": 0.21666666666666667,
+      "wald_mean": 0.3741858070940978,
+      "wald_sd": 1.6331917477632119,
+      "wald_se_mean": 1.7811367829997196,
+      "pct_converged": 100.0
+    },
+    {
+      "N": 10302,
+      "alt": false,
+      "reps": 60.0,
+      "lr_reject": 0.1,
+      "wald_reject": 0.08333333333333333,
+      "wald_mean": 0.0365962298777421,
+      "wald_sd": 0.23482451205364885,
+      "wald_se_mean": 0.2129222825552425,
+      "pct_converged": 100.0
+    },
+    {
+      "N": 10302,
+      "alt": true,
+      "reps": 60.0,
+      "lr_reject": 0.7333333333333333,
+      "wald_reject": 0.8166666666666667,
+      "wald_mean": 0.5559143195687395,
+      "wald_sd": 0.20191036430156886,
+      "wald_se_mean": 0.2017499560867804,
+      "pct_converged": 100.0
+    }
+  ],
+  "mc_reps": 60
+}
