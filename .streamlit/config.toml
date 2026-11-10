@@ -1,0 +1,7 @@
+# 그림의 색을 밝은 바탕에 맞춰 골랐으므로 밝은 테마로 고정한다
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+
+[browser]
+gatherUsageStats = false

@@ -27,6 +27,7 @@
 | `code/15_compare_rerun.py` | 모든 분석을 처음부터 다시 실행한 결과와 이전에 저장된 결과를 숫자 하나씩 대조. `outputs/rerun_comparison.csv` |
 | `code/16_audit_selftest.py` | 점검 스크립트(14)의 자체 시험. 결과 파일의 사본에 일부러 틀린 값을 넣어 점검이 잡아내는지 확인. `outputs/audit_selftest.csv` |
 | `code/tools/package_codebook.py` | 코드집 ZIP 만들기. `--no-private`를 붙이면 개인 원자료를 뺀다 |
+| `app.py` | 결과 대시보드(Streamlit). `pip install -r requirements.txt` 뒤 `streamlit run app.py`. 저장된 집계 결과(outputs/, data/)만 읽으며 개인 원자료는 필요 없다. 탭: 요약, 유료 이용 추이, 잠재상태, 전이확률, 가격 인상과 노출, 모의실험, 검증 |
 | `code/lta_covariates.py` | 공변량 잠재전이모형(초기 상태·전이확률의 다항 로짓, 국면별 계수, 표준오차, 왈드 대비) |
 | `code/regulation_exposure.py` | 규제 강도 변인의 정의(가격 인상 노출 지수, 운영체제, 정책 단계) |
 | `code/06_covariate_lta.py` | 규제 강도 공변량 모형의 적합·검정·몬테카를로, 그림 11. 약 20~25분(`--quick`은 3~4분) |
