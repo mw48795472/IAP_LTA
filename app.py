@@ -67,6 +67,15 @@ def table(df, caption='표로 보기', **kw):
         st.dataframe(df, width='stretch', hide_index=True, **kw)
 
 
+def tag(real):
+    """이 탭의 결과가 실제 자료에서 나온 것인지 모의자료에서 나온 것인지 표시한다."""
+    text = '실자료 · 한국미디어패널 개인 원자료와 공개 자료' if real else '모의자료 · 실제 응답자의 자료가 아님'
+    try:
+        st.badge(text, color='blue' if real else 'orange')
+    except Exception:
+        st.caption(text)
+
+
 def hike_band(fig, x0=0.5, x1=2.5):
     fig.add_vrect(x0=x0, x1=x1, fillcolor=BAND, line_width=0, layer='below')
 
@@ -91,12 +100,14 @@ con = csv('real_regime_contrasts.csv')
 expo = csv('real_exposure_logit.csv')
 
 st.title('인앱결제 강제금지 규제와 디지털 콘텐츠 소비 상태의 전이')
-st.caption('KISDI 한국미디어패널 개인 원자료 2020~2025년의 잠재전이분석(LTA) 결과. 이 화면은 저장된 집계 결과만 보여 주며, 개인 단위 자료는 들어 있지 않다.')
+st.caption('KISDI 한국미디어패널 개인 원자료 2020~2025년의 잠재전이분석(LTA) 결과. 이 화면은 저장된 집계 결과만 보여 주며, 개인 단위 자료는 들어 있지 않다. '
+           '보고서에는 원자료를 얻기 전에 분석 절차를 검증한 모의자료 분석도 들어 있는데, 그 결과는 "모의자료 검증" 탭에 따로 모았다.')
 
-tabs = st.tabs(['요약', '유료 이용 추이', '잠재상태', '전이확률', '가격 인상과 노출', '모의실험', '검증', '보고서'])
+tabs = st.tabs(['요약', '유료 이용 추이', '잠재상태', '전이확률', '가격 인상과 노출', '모의자료 검증', '검증', '보고서'])
 
 # ───────────────────────── 1. 요약 ─────────────────────────
 with tabs[0]:
+    tag(True)
     if need(rs, occ, tp):
         c = st.columns(4)
         c[0].metric('분석 대상 개인', f"{rs['n_persons']:,}명")
@@ -152,6 +163,7 @@ with tabs[0]:
 
 # ───────────────────────── 2. 유료 이용 추이 ─────────────────────────
 with tabs[1]:
+    tag(True)
     if need(prev, man):
         st.subheader('연도별 유료 이용 비율')
         st.caption('전체 응답자 대비 가중 비율. 영상 유료 이용은 2020년에 해당 문항이 없다. 2024년에는 영상 문항의 수준이 한 번에 달라져 측정 단절로 처리하였다.')
@@ -187,6 +199,7 @@ with tabs[1]:
 
 # ───────────────────────── 3. 잠재상태 ─────────────────────────
 with tabs[2]:
+    tag(True)
     if need(prof, occ):
         st.subheader('상태별 응답확률: 각 상태는 어떤 소비인가')
         st.caption('각 상태에 속한 사람이 해당 항목을 유료로 이용할 확률. 영상 문항은 2024년부터 응답확률을 따로 추정하였다(부분 측정불변).')
@@ -225,6 +238,7 @@ with tabs[2]:
 
 # ───────────────────────── 4. 전이확률 ─────────────────────────
 with tabs[3]:
+    tag(True)
     if need(tp):
         states = list(STATE_COLOR)
         intervals = list(dict.fromkeys(tp.interval))
@@ -279,6 +293,7 @@ with tabs[3]:
 
 # ───────────────────────── 5. 가격 인상과 노출 ─────────────────────────
 with tabs[4]:
+    tag(True)
     svc = csv('prop1_service_types.csv')
     if need(svc):
         st.subheader('2022년 안드로이드 인앱 가격 인상률')
@@ -330,31 +345,134 @@ with tabs[4]:
             st.caption(f"관측 {int(d.n.iloc[0]):,}건, 개인 {int(d.n_persons.iloc[0]):,}명, 가구 {int(d.n_households.iloc[0]):,}가구. 파란 점은 95% 구간이 0을 포함하지 않는 항.")
         table(d.iloc[::-1][['term', 'estimate', 'se', 'z', 'p']].round(3).rename(columns={'term': '항', 'estimate': '계수', 'se': '표준오차'}))
 
-# ───────────────────────── 6. 모의실험 ─────────────────────────
+# ───────────────────────── 6. 모의자료 검증 ─────────────────────────
 with tabs[5]:
-    mc = csv('mc_summary.csv')
-    if need(mc):
-        st.subheader('이 방법은 전이확률의 변화를 얼마나 잘 잡아내는가(검정력)')
-        st.caption('원자료를 얻기 전에 공표 표본 크기와 유지율에 맞춘 모의패널로 한 실험. 심어 둔 변화의 크기와 표본 크기에 따라 "변화 없음" 가설을 기각한 비율이다.')
-        fig = go.Figure()
-        for n, col in zip(sorted(mc.N.unique()), (BLUE, ORANGE, AQUA)):
-            d = mc[mc.N == n].sort_values('delta')
-            fig.add_trace(go.Scatter(x=d.delta, y=d.reject_rate_regime * 100, name=f'N = {n:,}', mode='lines+markers', line=dict(color=col, width=2), marker=dict(size=8, line=dict(color='white', width=2)),
-                                     customdata=d.reps, hovertemplate='변화 크기 %{x:.2f}<br>' + f'N = {n:,}' + ': 기각률 %{y:.1f}% (반복 %{customdata}회)<extra></extra>'))
-        fig.add_hline(y=5, line_dash='dot', line_color=MUTED, line_width=1, annotation_text='유의수준 5%', annotation_font_color=MUTED)
-        fig = style(fig, ytitle='기각률', xtitle='심어 둔 전이확률 변화의 크기', pct=True, height=360)
-        fig.update_xaxes(tickvals=sorted(mc.delta.unique()))
-        show(fig)
-        table(mc[['N', 'delta', 'reps', 'reject_rate', 'reject_rate_regime', 'pct_converged']].round(3).rename(
-            columns={'delta': '변화 크기', 'reps': '반복', 'reject_rate': '기각률(전체 검정)', 'reject_rate_regime': '기각률(국면 검정)', 'pct_converged': '수렴(%)'}))
+    tag(False)
+    st.info('**이 탭의 결과는 실제 응답자의 자료가 아니다.** 개인 원자료를 얻기 전에, 한국미디어패널의 공표 표본 크기(10,302명)와 유지율, 경험률에 맞춰 만든 '
+            '모의패널로 분석 절차가 제대로 작동하는지 검증한 것이다(보고서 Ⅳ장 2–7절, 9–10절). 참값을 정해 놓고 만든 자료이므로 "추정이 참값을 되찾는가"를 볼 수 있다. '
+            '실제 소비 행태에 관한 결과는 다른 탭(보고서 Ⅴ장)에 있다.')
+    sim = st.tabs(['참값을 되찾는가', '상태 수와 교차검증', '검정력', '설계와 실제의 차이', '공변량 모형'])
 
-    cmc = csv('cov_mc_summary.csv')
-    if cmc is not None:
-        st.subheader('공변량(가격 인상 노출 지수) 모형의 모의실험')
-        st.caption('노출 지수와 가격 인상기의 상호작용을 심은 경우(효과 있음)와 심지 않은 경우의 기각률.')
-        st.dataframe(cmc.assign(alt=cmc.alt.map({True: '효과 있음', False: '효과 없음'})).round(3).rename(
-            columns={'alt': '설계', 'reps': '반복', 'lr_reject': '기각률(우도비)', 'wald_reject': '기각률(왈드)', 'wald_mean': '추정값 평균', 'wald_sd': '추정값 표준편차',
-                     'wald_se_mean': '표준오차 평균', 'pct_converged': '수렴(%)'}), width='stretch', hide_index=True)
+    with sim[0]:
+        rp, tr, so = csv('response_profiles.csv'), csv('transition_probabilities.csv'), csv('state_occupancy.csv')
+        if need(rp, tr, so):
+            st.subheader('추정값은 심어 둔 참값을 되찾았는가')
+            parts = [('응답확률', rp.assign(label=rp.item.map(ITEM_KO) + ' · ' + rp.state), BLUE),
+                     ('전이확률', tr.assign(label=tr.interval + ' ' + tr.from_state + ' → ' + tr.to_state), ORANGE),
+                     ('상태 비중', so.assign(label=so.wave.astype(str) + '년 ' + so.state), AQUA)]
+            allp = pd.concat([d.assign(kind=k) for k, d, _ in parts], ignore_index=True)
+            c = st.columns(3)
+            c[0].metric('비교한 모수', f'{len(allp)}개')
+            c[1].metric('참값이 95% 구간 안에 든 것', f'{int(allp.covered.sum())}개')
+            c[2].metric('추정값과 참값의 평균 차이', f"{(allp.estimate - allp['true']).abs().mean():.3f}")
+            fig = go.Figure()
+            fig.add_trace(go.Scatter(x=[0, 1], y=[0, 1], mode='lines', line=dict(color=MUTED, width=1, dash='dot'), hoverinfo='skip', showlegend=False))
+            for name, d, col in parts:
+                fig.add_trace(go.Scatter(
+                    x=d['true'], y=d.estimate, mode='markers', name=name, marker=dict(size=9, color=col, line=dict(color='white', width=1.5)),
+                    error_y=dict(type='data', symmetric=False, array=d.ci_high - d.estimate, arrayminus=d.estimate - d.ci_low, color=col, thickness=1, width=0),
+                    customdata=d[['label']], hovertemplate='%{customdata[0]}<br>참값 %{x:.3f}, 추정 %{y:.3f}<extra>' + name + '</extra>'))
+            fig = style(fig, height=440, xtitle='심어 둔 참값', ytitle='추정값')
+            fig.update_xaxes(range=[-0.02, 1.02], showgrid=True, gridcolor=GRID)
+            fig.update_yaxes(range=[-0.02, 1.02])
+            show(fig)
+            st.caption('점이 대각선 위에 있으면 추정이 참값을 정확히 되찾은 것이다. 세로 막대는 95% 구간.')
+            table(allp[['kind', 'label', 'true', 'estimate', 'ci_low', 'ci_high', 'covered']].round(3).rename(
+                columns={'kind': '종류', 'label': '모수', 'true': '참값', 'estimate': '추정값', 'ci_low': '하한', 'ci_high': '상한', 'covered': '구간 안에 참값'}))
+        hom = csv('transition_homogeneity_tests.csv')
+        if hom is not None:
+            st.subheader('전이확률이 시기에 따라 달라졌는가에 대한 검정')
+            st.caption('모의패널에는 전이확률이 중간에 0.06 달라지도록 심어 두었다. 표본이 10,302명이어도 이 크기의 변화는 5% 수준에서 유의하지 않았다. '
+                       '작은 변화는 이 방법으로 가려내기 어렵다는 뜻이다.')
+            st.dataframe(hom.round(4).rename(columns={'test': '검정', 'LR': '우도비 통계량', 'df': '자유도', 'BIC_restricted': 'BIC(제약 모형)', 'BIC_full': 'BIC(자유 모형)'}),
+                         width='stretch', hide_index=True)
+
+    with sim[1]:
+        sel = csv('model_selection.csv')
+        if need(sel):
+            st.subheader('상태 수의 선택')
+            st.caption('세 상태로 만든 모의패널에서 BIC는 세 상태에서 가장 낮았다. 상태 수를 올바르게 골라낸다는 뜻이다.')
+            fig = go.Figure(go.Scatter(x=sel.K, y=sel.BIC, mode='lines+markers', line=dict(color=ORANGE, width=2), marker=dict(size=8, line=dict(color='white', width=2)),
+                                       hovertemplate='상태 수 %{x}<br>BIC %{y:,.0f}<extra></extra>'))
+            fig = style(fig, ytitle='BIC', xtitle='상태 수(K)', height=320, legend=False)
+            fig.update_xaxes(dtick=1)
+            show(fig)
+            table(sel[['K', 'loglik', 'npar', 'BIC', 'smallest_state_share', 'entropy']].round(3).rename(
+                columns={'loglik': '로그우도', 'npar': '모수 수', 'smallest_state_share': '가장 작은 상태 비중', 'entropy': '엔트로피'}))
+        ks = csv('mc_kselect_summary.csv')
+        if ks is not None:
+            st.caption('표본 크기별로 100번씩 새 모의패널을 만들어 반복했을 때 BIC가 고른 상태 수의 비율.')
+            st.dataframe(ks.round(1).rename(columns={'reps': '반복', 'pct_bic_k2': '두 상태 선택(%)', 'pct_bic_k3': '세 상태 선택(%)', 'pct_bic_k4': '네 상태 선택(%)',
+                                                     'mean_dbic_3_vs_2': 'BIC 차이(2상태 − 3상태)', 'mean_dbic_3_vs_4': 'BIC 차이(4상태 − 3상태)'}), width='stretch', hide_index=True)
+        rc = csv('r_crosscheck.csv')
+        if rc is not None:
+            st.subheader('서로 다른 구현의 교차검증')
+            st.caption('같은 모의패널을 파이썬 엔진, R로 따로 짠 엔진, R 패키지 LMest로 각각 추정해 로그우도와 모수 수, BIC가 일치하는지 본 것이다.')
+            st.dataframe(rc.pivot(index='quantity', columns='source', values='value').reset_index().rename(columns={'quantity': '항목'}), width='stretch', hide_index=True)
+
+    with sim[2]:
+        mc = csv('mc_summary.csv')
+        if need(mc):
+            st.subheader('이 방법은 전이확률의 변화를 얼마나 잘 잡아내는가(검정력)')
+            st.caption('심어 둔 변화의 크기와 표본 크기를 바꿔 가며 모의패널을 200번씩 만들어, "변화 없음" 가설을 기각한 비율을 센 것이다.')
+            fig = go.Figure()
+            for n, col in zip(sorted(mc.N.unique()), (BLUE, ORANGE, AQUA)):
+                d = mc[mc.N == n].sort_values('delta')
+                fig.add_trace(go.Scatter(x=d.delta, y=d.reject_rate_regime * 100, name=f'N = {n:,}', mode='lines+markers', line=dict(color=col, width=2), marker=dict(size=8, line=dict(color='white', width=2)),
+                                         customdata=d.reps, hovertemplate='변화 크기 %{x:.2f}<br>' + f'N = {n:,}' + ': 기각률 %{y:.1f}% (반복 %{customdata}회)<extra></extra>'))
+            fig.add_hline(y=5, line_dash='dot', line_color=MUTED, line_width=1, annotation_text='유의수준 5%', annotation_font_color=MUTED)
+            fig = style(fig, ytitle='기각률', xtitle='심어 둔 전이확률 변화의 크기', pct=True, height=360)
+            fig.update_xaxes(tickvals=sorted(mc.delta.unique()))
+            show(fig)
+            table(mc[['N', 'delta', 'reps', 'reject_rate', 'reject_rate_regime', 'pct_converged']].round(3).rename(
+                columns={'delta': '변화 크기', 'reps': '반복', 'reject_rate': '기각률(전체 검정)', 'reject_rate_regime': '기각률(국면 검정)', 'pct_converged': '수렴(%)'}))
+
+    with sim[3]:
+        rv = csv('reval_design_vs_real.csv')
+        if need(rv):
+            st.subheader('모의패널의 설계는 실제와 얼마나 달랐나')
+            st.caption('모의패널은 2025년 보고서의 공표 수치에 맞춰 완만한 상승을 가정하였다. 뒤에 2021~2024년 보고서를 구해 대조하니 실제 궤적은 달랐다. '
+                       '그래서 모의자료의 결과를 실제 소비 행태로 읽어서는 안 되며, 실제 결과는 원자료 분석에서 본다.')
+            rv_ko = {'paid_app': '유료 앱 구입', 'inapp_item': '앱 내 아이템 구입', 'paid_video': '영상 월정액 가입', 'paid_music': '온라인 음악 이용'}
+            c = st.columns(2)
+            c[0].metric('설계와 실제의 최대 차이', f'{rv.diff_pp.abs().max():.1f}%포인트')
+            c[1].metric('평균 차이', f'{rv.diff_pp.abs().mean():.1f}%포인트')
+            it = st.radio('지표', list(rv_ko), format_func=rv_ko.get, horizontal=True)
+            d = rv[rv.item == it].sort_values('year')
+            fig = go.Figure()
+            for colname, name, col in (('real_pct', '실제 공표 수치', BLUE), ('design_pct', '모의패널 설계', ORANGE)):
+                fig.add_trace(go.Scatter(x=d.year.astype(str), y=d[colname], name=name, mode='lines+markers', line=dict(color=col, width=2), marker=dict(size=8, line=dict(color='white', width=2)),
+                                         hovertemplate='%{x}년<br>' + name + ': %{y:.1f}%<extra></extra>'))
+            show(style(fig, ytitle='전체 응답자 대비 비율', pct=True, height=340))
+            table(rv.assign(item=rv.item.map(rv_ko)).round(1).rename(columns={'year': '연도', 'item': '지표', 'real_pct': '실제(%)', 'design_pct': '설계(%)', 'diff_pp': '차이(%p)'}))
+
+    with sim[4]:
+        ci = csv('cov_interaction_tests.csv')
+        if need(ci):
+            st.subheader('공변량 모형은 심어 둔 효과를 되찾는가')
+            st.caption('가격 인상 노출 지수와 운영체제가 가격 인상기의 전이확률에 미치는 효과를 정해 놓고 모의패널을 만든 뒤, 그 효과를 다시 추정한 것이다. '
+                       '실제 원자료에서는 이 모형의 추정이 불안정하여 결론에 쓰지 않았다.')
+            cv = st.radio('공변량', list(ci.covariate.unique()), horizontal=True)
+            d = ci[ci.covariate == cv].iloc[::-1]
+            lab = d.origin + ' → ' + d.dest
+            fig = go.Figure()
+            fig.add_trace(go.Scatter(x=d.estimate, y=lab, mode='markers', name='추정값(95% 구간)', marker=dict(size=11, color=ORANGE, line=dict(color='white', width=2)),
+                                     error_x=dict(type='data', array=1.96 * d.se, color=MUTED, thickness=1.5, width=5), customdata=list(zip(d.se, d.p)),
+                                     hovertemplate='%{y}<br>추정 %{x:.3f} (표준오차 %{customdata[0]:.3f}, p = %{customdata[1]:.3f})<extra></extra>'))
+            fig.add_trace(go.Scatter(x=d['true'], y=lab, mode='markers', name='심어 둔 참값', marker=dict(size=12, symbol='diamond-open', color=INK, line=dict(width=2)),
+                                     hovertemplate='%{y}<br>참값 %{x:.2f}<extra></extra>'))
+            fig.add_vline(x=0, line_color=MUTED, line_width=1)
+            fig = style(fig, height=340, xtitle='가격 인상기의 로짓 계수')
+            fig.update_yaxes(showgrid=False, tickfont=dict(color=INK))
+            fig.update_xaxes(showgrid=True, gridcolor=GRID)
+            show(fig)
+            table(ci.round(3).rename(columns={'origin': '올해 상태', 'dest': '이듬해 상태', 'covariate': '공변량', 'estimate': '추정값', 'se': '표준오차', 'true': '참값'}))
+        cmc = csv('cov_mc_summary.csv')
+        if cmc is not None:
+            st.caption('노출 지수와 가격 인상기의 상호작용을 심은 경우(효과 있음)와 심지 않은 경우를 60번씩 반복했을 때의 기각률.')
+            st.dataframe(cmc.assign(alt=cmc.alt.map({True: '효과 있음', False: '효과 없음'})).round(3).rename(
+                columns={'alt': '설계', 'reps': '반복', 'lr_reject': '기각률(우도비)', 'wald_reject': '기각률(왈드)', 'wald_mean': '추정값 평균', 'wald_sd': '추정값 표준편차',
+                         'wald_se_mean': '표준오차 평균', 'pct_converged': '수렴(%)'}), width='stretch', hide_index=True)
 
 # ───────────────────────── 7. 검증 ─────────────────────────
 with tabs[6]:
@@ -411,6 +529,8 @@ with tabs[7]:
         a, b = st.columns([1, 3])
         a.download_button('PDF 내려받기', pdf.read_bytes(), file_name=pdf.name.replace('논문', '보고서'), mime='application/pdf', type='primary')
         b.caption(f'PDF · {pdf.stat().st_size / 1e6:.1f} MB')
+        st.info('보고서를 읽을 때: Ⅳ장의 2–7절과 9–10절은 실제 응답자가 아닌 **모의패널**로 분석 절차를 검증한 부분이고, '
+                '실제 원자료의 분석 결과는 **Ⅴ장**이다. 이 대시보드에서는 모의자료 결과를 "모의자료 검증" 탭에 따로 두었다.')
         try:
             st.pdf(str(pdf), height=900)
         except Exception:
