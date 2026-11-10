@@ -93,7 +93,7 @@ expo = csv('real_exposure_logit.csv')
 st.title('인앱결제 강제금지 규제와 디지털 콘텐츠 소비 상태의 전이')
 st.caption('KISDI 한국미디어패널 개인 원자료 2020~2025년의 잠재전이분석(LTA) 결과. 이 화면은 저장된 집계 결과만 보여 주며, 개인 단위 자료는 들어 있지 않다.')
 
-tabs = st.tabs(['요약', '유료 이용 추이', '잠재상태', '전이확률', '가격 인상과 노출', '모의실험', '검증', '논문'])
+tabs = st.tabs(['요약', '유료 이용 추이', '잠재상태', '전이확률', '가격 인상과 노출', '모의실험', '검증', '보고서'])
 
 # ───────────────────────── 1. 요약 ─────────────────────────
 with tabs[0]:
@@ -148,7 +148,7 @@ with tabs[0]:
 
     pdfs = sorted(PAPER.glob('*.pdf')) if PAPER.exists() else []
     if pdfs:
-        st.caption('논문 전문은 맨 오른쪽의 "논문" 탭에서 바로 읽거나 내려받을 수 있다.')
+        st.caption('보고서 전문은 맨 오른쪽의 "보고서" 탭에서 바로 읽거나 내려받을 수 있다.')
 
 # ───────────────────────── 2. 유료 이용 추이 ─────────────────────────
 with tabs[1]:
@@ -361,7 +361,7 @@ with tabs[6]:
     audit, rerun, fact, self_, ver = csv('paper_audit.csv'), csv('rerun_comparison.csv'), csv('fact_check.csv'), csv('audit_selftest.csv'), csv('real_verification.csv')
     c = st.columns(4)
     if audit is not None:
-        c[0].metric('논문 수치 전수 점검', f"{int((audit.result == '일치').sum())} / {len(audit)} 일치")
+        c[0].metric('보고서 수치 전수 점검', f"{int((audit.result == '일치').sum())} / {len(audit)} 일치")
     if rerun is not None:
         c[1].metric('재실행 대조한 숫자', f"{int(rerun.n_values.sum()):,}개", f"달라진 값 {int(rerun.n_different.clip(lower=0).sum()):,}개", delta_color='off')
     if fact is not None:
@@ -380,15 +380,15 @@ with tabs[6]:
                      width='stretch', hide_index=True)
     if fact is not None:
         st.subheader('출처 재확인')
-        st.caption('본문에 직접 적은 날짜·금액·가격을 출처 페이지에서 다시 대조한 결과. 불일치와 확인 불가 항목은 논문에서 고치거나 뺐다.')
+        st.caption('본문에 직접 적은 날짜·금액·가격을 출처 페이지에서 다시 대조한 결과. 불일치와 확인 불가 항목은 보고서에서 고치거나 뺐다.')
         pick = st.multiselect('상태', list(fact.status.unique()), default=list(fact.status.unique()))
         st.dataframe(fact[fact.status.isin(pick)][['id', 'claim', 'status', 'source_url', 'note']].rename(columns={'claim': '사실', 'status': '상태', 'source_url': '출처', 'note': '비고'}),
                      width='stretch', hide_index=True, column_config={'출처': st.column_config.LinkColumn('출처', display_text='열기')})
     if audit is not None:
-        st.subheader('논문 수치 전수 점검')
+        st.subheader('보고서 수치 전수 점검')
         g = st.selectbox('영역', ['전체'] + list(audit.group.unique()))
         d = audit if g == '전체' else audit[audit.group == g]
-        st.dataframe(d.rename(columns={'group': '영역', 'item': '점검 항목', 'paper': '논문의 값', 'recomputed': '다시 계산한 값', 'result': '결과', 'note': '비고'}), width='stretch', hide_index=True)
+        st.dataframe(d.rename(columns={'group': '영역', 'item': '점검 항목', 'paper': '보고서의 값', 'recomputed': '다시 계산한 값', 'result': '결과', 'note': '비고'}), width='stretch', hide_index=True)
     if ver is not None:
         st.subheader('원자료 결과의 재검증')
         st.dataframe(ver.rename(columns={'group': '영역', 'check': '검사', 'result': '결과', 'detail': '내용'}), width='stretch', hide_index=True)
@@ -398,19 +398,19 @@ with tabs[6]:
         st.dataframe(self_.rename(columns={'case': '넣은 오류', 'expected_group': '잡혀야 할 영역', 'flagged': '불일치로 잡힌 수', 'flagged_groups': '잡힌 영역', 'passed': '통과'}),
                      width='stretch', hide_index=True)
 
-# ───────────────────────── 8. 논문 ─────────────────────────
+# ───────────────────────── 8. 보고서 ─────────────────────────
 with tabs[7]:
     pdfs = sorted(PAPER.glob('*.pdf')) if PAPER.exists() else []
     if not pdfs:
-        st.info('paper/ 폴더에 논문 PDF가 없습니다.')
+        st.info('paper/ 폴더에 보고서 PDF가 없습니다.')
     else:
         pdf = pdfs[-1]
-        st.subheader('논문 전문')
+        st.subheader('보고서 전문')
         st.caption('한국 인앱결제 강제금지 규제와 디지털 콘텐츠 소비 상태의 전이: 한국미디어패널 2020~2025년의 잠재전이분석. '
                    '아래에서 바로 읽을 수 있고, 내려받아 볼 수도 있다.')
         a, b = st.columns([1, 3])
-        a.download_button('PDF 내려받기', pdf.read_bytes(), file_name=pdf.name, mime='application/pdf', type='primary')
-        b.caption(f'파일: {pdf.name} · {pdf.stat().st_size / 1e6:.1f} MB')
+        a.download_button('PDF 내려받기', pdf.read_bytes(), file_name=pdf.name.replace('논문', '보고서'), mime='application/pdf', type='primary')
+        b.caption(f'PDF · {pdf.stat().st_size / 1e6:.1f} MB')
         try:
             st.pdf(str(pdf), height=900)
         except Exception:
@@ -418,4 +418,4 @@ with tabs[7]:
             st.info('이 환경에서는 화면 안에서 PDF를 열 수 없습니다. 위의 버튼으로 내려받아 보세요. (pip install "streamlit[pdf]" 를 설치하면 화면 안에서 열립니다.)')
 
 st.divider()
-st.caption('자료: KISDI 한국미디어패널(2020~2025), 공식 문서와 보도. 시기에 따른 전이의 차이를 규제의 인과효과로 읽을 수는 없다. 코드와 논문은 저장소의 README 참조.')
+st.caption('자료: KISDI 한국미디어패널(2020~2025), 공식 문서와 보도. 시기에 따른 전이의 차이를 규제의 인과효과로 읽을 수는 없다. 코드와 보고서는 저장소의 README 참조.')
