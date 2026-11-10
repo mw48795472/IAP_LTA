@@ -93,7 +93,7 @@ expo = csv('real_exposure_logit.csv')
 st.title('인앱결제 강제금지 규제와 디지털 콘텐츠 소비 상태의 전이')
 st.caption('KISDI 한국미디어패널 개인 원자료 2020~2025년의 잠재전이분석(LTA) 결과. 이 화면은 저장된 집계 결과만 보여 주며, 개인 단위 자료는 들어 있지 않다.')
 
-tabs = st.tabs(['요약', '유료 이용 추이', '잠재상태', '전이확률', '가격 인상과 노출', '모의실험', '검증'])
+tabs = st.tabs(['요약', '유료 이용 추이', '잠재상태', '전이확률', '가격 인상과 노출', '모의실험', '검증', '논문'])
 
 # ───────────────────────── 1. 요약 ─────────────────────────
 with tabs[0]:
@@ -148,7 +148,7 @@ with tabs[0]:
 
     pdfs = sorted(PAPER.glob('*.pdf')) if PAPER.exists() else []
     if pdfs:
-        st.download_button('논문 PDF 내려받기', pdfs[-1].read_bytes(), file_name=pdfs[-1].name, mime='application/pdf')
+        st.caption('논문 전문은 맨 오른쪽의 "논문" 탭에서 바로 읽거나 내려받을 수 있다.')
 
 # ───────────────────────── 2. 유료 이용 추이 ─────────────────────────
 with tabs[1]:
@@ -397,6 +397,25 @@ with tabs[6]:
         st.caption('결과 파일과 워드 파일의 사본에 일부러 틀린 값을 넣었을 때 점검이 그것을 잡아내는지 본 것.')
         st.dataframe(self_.rename(columns={'case': '넣은 오류', 'expected_group': '잡혀야 할 영역', 'flagged': '불일치로 잡힌 수', 'flagged_groups': '잡힌 영역', 'passed': '통과'}),
                      width='stretch', hide_index=True)
+
+# ───────────────────────── 8. 논문 ─────────────────────────
+with tabs[7]:
+    pdfs = sorted(PAPER.glob('*.pdf')) if PAPER.exists() else []
+    if not pdfs:
+        st.info('paper/ 폴더에 논문 PDF가 없습니다.')
+    else:
+        pdf = pdfs[-1]
+        st.subheader('논문 전문')
+        st.caption('한국 인앱결제 강제금지 규제와 디지털 콘텐츠 소비 상태의 전이: 한국미디어패널 2020~2025년의 잠재전이분석. '
+                   '아래에서 바로 읽을 수 있고, 내려받아 볼 수도 있다.')
+        a, b = st.columns([1, 3])
+        a.download_button('PDF 내려받기', pdf.read_bytes(), file_name=pdf.name, mime='application/pdf', type='primary')
+        b.caption(f'파일: {pdf.name} · {pdf.stat().st_size / 1e6:.1f} MB')
+        try:
+            st.pdf(str(pdf), height=900)
+        except Exception:
+            # streamlit[pdf] 가 설치되지 않은 환경에서는 화면 안 보기를 건너뛴다
+            st.info('이 환경에서는 화면 안에서 PDF를 열 수 없습니다. 위의 버튼으로 내려받아 보세요. (pip install "streamlit[pdf]" 를 설치하면 화면 안에서 열립니다.)')
 
 st.divider()
 st.caption('자료: KISDI 한국미디어패널(2020~2025), 공식 문서와 보도. 시기에 따른 전이의 차이를 규제의 인과효과로 읽을 수는 없다. 코드와 논문은 저장소의 README 참조.')

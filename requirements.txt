@@ -1,4 +1,4 @@
 # 대시보드(app.py) 실행에 필요한 패키지
-streamlit>=1.50
+streamlit[pdf]>=1.50
 pandas>=2.0
 plotly>=5.20
