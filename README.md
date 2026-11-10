@@ -2,7 +2,9 @@
 
 2021년 한국은 세계에서 처음으로 앱마켓 사업자가 특정 결제방식을 강제하지 못하게 하는 법을 시행하였다. 이 저장소는 그 뒤 **이용자의 유료 디지털 콘텐츠 소비가 어떻게 달라졌는지**를 KISDI 한국미디어패널 개인 원자료(2020~2025년, 11,362명)의 잠재전이분석(Latent Transition Analysis, LTA)으로 살펴본 연구의 논문과 코드, 결과를 담고 있다.
 
-**바로 가기** · [논문 PDF(58쪽)](paper/한국_인앱결제_LTA_논문_20261111.pdf) · [결과 대시보드](#결과-대시보드) · [코드와 파일 안내](CODEBOOK.md)
+[![Streamlit에서 열기](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://iap-lta.streamlit.app)
+
+**바로 가기** · [결과 대시보드(웹)](https://iap-lta.streamlit.app) · [논문 PDF(58쪽)](paper/한국_인앱결제_LTA_논문_20261111.pdf) · [코드와 파일 안내](CODEBOOK.md)
 
 ## 한눈에 보기
 
@@ -150,7 +152,11 @@
 
 ## 결과 대시보드
 
-분석 결과를 탭으로 나누어 볼 수 있는 Streamlit 대시보드(`app.py`)가 들어 있다. 저장된 집계 결과만 읽으므로 개인 원자료 없이 실행된다.
+분석 결과를 탭으로 나누어 볼 수 있는 Streamlit 대시보드이다. 설치 없이 웹에서 바로 볼 수 있다.
+
+**👉 <https://iap-lta.streamlit.app>**
+
+저장된 집계 결과만 읽으므로 개인 원자료는 들어 있지 않다. 한동안 접속이 없으면 앱이 잠들어 있을 수 있는데, 화면의 깨우기 버튼을 누르면 1분 안에 다시 켜진다.
 
 | 탭 | 내용 |
 |---|---|
@@ -171,7 +177,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-**웹에 올리기.** [Streamlit Community Cloud에 이 저장소 배포하기](https://share.streamlit.io/deploy?repository=mw48795472/IAP_LTA&branch=main&mainModule=app.py)를 열어 로그인하면 저장소(`mw48795472/IAP_LTA`), 브랜치(`main`), 파일(`app.py`)이 채워진 배포 화면이 나온다.
+웹 버전은 Streamlit Community Cloud에서 이 저장소의 `main` 브랜치 `app.py`를 그대로 실행한 것이다. `main`에 푸시하면 자동으로 다시 배포된다.
 
 ## 저장소 구성
 
